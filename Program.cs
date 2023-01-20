@@ -16,7 +16,9 @@ namespace myKEP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new myKEP());
+            Form myKEP = new Form1();
+            Application.Run(myKEP);
+            GUIservice gui = new GUIservice(myKEP);
         }
     }
 }
