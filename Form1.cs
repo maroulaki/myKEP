@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using SQLite;
 
@@ -64,6 +65,18 @@ namespace myKEP
             back.Visible = false;
         }
 
+        private void showAddReqElements()
+        {
+            newReqLabel.Location = new Point(330, 20);
+            newReqLabel.Visible = true;
+            nameLabel.Location = new Point(206, 127);
+            nameLabel.Visible = true;
+            surnameLabel.Location = new Point(206, 207);
+            surnameLabel.Visible = true;
+            phoneLabel.Location = new Point(206, 287);
+            phoneLabel.Visible = true;
+          
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

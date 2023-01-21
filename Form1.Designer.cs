@@ -49,7 +49,7 @@
             this.phoneText = new System.Windows.Forms.TextBox();
             this.surnameText = new System.Windows.Forms.TextBox();
             this.nameText = new System.Windows.Forms.TextBox();
-            this.newreq = new System.Windows.Forms.Label();
+            this.newReqLabel = new System.Windows.Forms.Label();
             this.typeLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.dobLabel = new System.Windows.Forms.Label();
@@ -62,6 +62,13 @@
             this.prevDateLabel = new System.Windows.Forms.Label();
             this.listOption = new System.Windows.Forms.ComboBox();
             this.listOptionButton = new System.Windows.Forms.Button();
+            this.reqDelLabel = new System.Windows.Forms.Label();
+            this.delButton = new System.Windows.Forms.Button();
+            this.reqIDLabel = new System.Windows.Forms.Label();
+            this.reqIDText = new System.Windows.Forms.TextBox();
+            this.DelByATButton = new System.Windows.Forms.Button();
+            this.ATLabel = new System.Windows.Forms.Label();
+            this.ATText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
@@ -301,18 +308,18 @@
             this.nameText.Size = new System.Drawing.Size(149, 29);
             this.nameText.TabIndex = 14;
             // 
-            // newreq
+            // newReqLabel
             // 
-            this.newreq.AutoSize = true;
-            this.newreq.BackColor = System.Drawing.Color.Transparent;
-            this.newreq.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.newreq.Location = new System.Drawing.Point(3, 18);
-            this.newreq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.newreq.Name = "newreq";
-            this.newreq.Size = new System.Drawing.Size(190, 45);
-            this.newreq.TabIndex = 22;
-            this.newreq.Text = "Νέα αίτηση";
-            this.newreq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.newReqLabel.AutoSize = true;
+            this.newReqLabel.BackColor = System.Drawing.Color.Transparent;
+            this.newReqLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.newReqLabel.Location = new System.Drawing.Point(3, 18);
+            this.newReqLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.newReqLabel.Name = "newReqLabel";
+            this.newReqLabel.Size = new System.Drawing.Size(190, 45);
+            this.newReqLabel.TabIndex = 22;
+            this.newReqLabel.Text = "Νέα αίτηση";
+            this.newReqLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // typeLabel
             // 
@@ -472,6 +479,95 @@
             this.listOptionButton.Text = "Επιλογή";
             this.listOptionButton.UseVisualStyleBackColor = false;
             // 
+            // reqDelLabel
+            // 
+            this.reqDelLabel.AutoSize = true;
+            this.reqDelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.reqDelLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqDelLabel.Location = new System.Drawing.Point(515, 523);
+            this.reqDelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.reqDelLabel.Name = "reqDelLabel";
+            this.reqDelLabel.Size = new System.Drawing.Size(294, 45);
+            this.reqDelLabel.TabIndex = 35;
+            this.reqDelLabel.Text = "Διαγραφή αίτησης";
+            this.reqDelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // delButton
+            // 
+            this.delButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.delButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.delButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delButton.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.delButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.delButton.Location = new System.Drawing.Point(16, 440);
+            this.delButton.Margin = new System.Windows.Forms.Padding(0);
+            this.delButton.Name = "delButton";
+            this.delButton.Size = new System.Drawing.Size(182, 35);
+            this.delButton.TabIndex = 44;
+            this.delButton.Text = "Διαγραφή";
+            this.delButton.UseVisualStyleBackColor = false;
+            // 
+            // reqIDLabel
+            // 
+            this.reqIDLabel.AutoSize = true;
+            this.reqIDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.reqIDLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqIDLabel.Location = new System.Drawing.Point(11, 382);
+            this.reqIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.reqIDLabel.Name = "reqIDLabel";
+            this.reqIDLabel.Size = new System.Drawing.Size(157, 25);
+            this.reqIDLabel.TabIndex = 43;
+            this.reqIDLabel.Text = "Κωδικός αίτησης";
+            // 
+            // reqIDText
+            // 
+            this.reqIDText.BackColor = System.Drawing.SystemColors.Window;
+            this.reqIDText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqIDText.Location = new System.Drawing.Point(16, 409);
+            this.reqIDText.Margin = new System.Windows.Forms.Padding(2);
+            this.reqIDText.Name = "reqIDText";
+            this.reqIDText.Size = new System.Drawing.Size(182, 29);
+            this.reqIDText.TabIndex = 42;
+            // 
+            // DelByATButton
+            // 
+            this.DelByATButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DelByATButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DelByATButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DelByATButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DelByATButton.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DelByATButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DelByATButton.Location = new System.Drawing.Point(113, 544);
+            this.DelByATButton.Margin = new System.Windows.Forms.Padding(0);
+            this.DelByATButton.Name = "DelByATButton";
+            this.DelByATButton.Size = new System.Drawing.Size(182, 57);
+            this.DelByATButton.TabIndex = 47;
+            this.DelByATButton.Text = "Προβολή αιτήσεων \r\nγια διαγραφή\r\n";
+            this.DelByATButton.UseVisualStyleBackColor = false;
+            // 
+            // ATLabel
+            // 
+            this.ATLabel.AutoSize = true;
+            this.ATLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ATLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ATLabel.Location = new System.Drawing.Point(108, 483);
+            this.ATLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ATLabel.Name = "ATLabel";
+            this.ATLabel.Size = new System.Drawing.Size(190, 25);
+            this.ATLabel.TabIndex = 46;
+            this.ATLabel.Text = "Αριθμός Ταυτότητας";
+            // 
+            // ATText
+            // 
+            this.ATText.BackColor = System.Drawing.SystemColors.Window;
+            this.ATText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ATText.Location = new System.Drawing.Point(113, 510);
+            this.ATText.Margin = new System.Windows.Forms.Padding(2);
+            this.ATText.Name = "ATText";
+            this.ATText.Size = new System.Drawing.Size(182, 29);
+            this.ATText.TabIndex = 45;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -480,6 +576,13 @@
             this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(854, 631);
+            this.Controls.Add(this.DelByATButton);
+            this.Controls.Add(this.ATLabel);
+            this.Controls.Add(this.ATText);
+            this.Controls.Add(this.delButton);
+            this.Controls.Add(this.reqIDLabel);
+            this.Controls.Add(this.reqIDText);
+            this.Controls.Add(this.reqDelLabel);
             this.Controls.Add(this.listOptionButton);
             this.Controls.Add(this.listOption);
             this.Controls.Add(this.prevDateLabel);
@@ -492,7 +595,7 @@
             this.Controls.Add(this.typeManu);
             this.Controls.Add(this.dobPicker);
             this.Controls.Add(this.addressText);
-            this.Controls.Add(this.newreq);
+            this.Controls.Add(this.newReqLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.surnameLabel);
             this.Controls.Add(this.phoneLabel);
@@ -551,7 +654,7 @@
         private System.Windows.Forms.TextBox phoneText;
         private System.Windows.Forms.TextBox surnameText;
         private System.Windows.Forms.TextBox nameText;
-        private System.Windows.Forms.Label newreq;
+        private System.Windows.Forms.Label newReqLabel;
         private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.Label dobLabel;
@@ -564,6 +667,13 @@
         private System.Windows.Forms.Label prevDateLabel;
         private System.Windows.Forms.ComboBox listOption;
         private System.Windows.Forms.Button listOptionButton;
+        private System.Windows.Forms.Label reqDelLabel;
+        private System.Windows.Forms.Button delButton;
+        private System.Windows.Forms.Label reqIDLabel;
+        private System.Windows.Forms.TextBox reqIDText;
+        private System.Windows.Forms.Button DelByATButton;
+        private System.Windows.Forms.Label ATLabel;
+        private System.Windows.Forms.TextBox ATText;
     }
 }
 
