@@ -46,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.reqEditLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -69,7 +70,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(330, 20);
+            this.label1.Location = new System.Drawing.Point(653, 478);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 45);
@@ -273,6 +274,19 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Αριθμός Ταυτότητας";
             // 
+            // reqEditLabel
+            // 
+            this.reqEditLabel.AutoSize = true;
+            this.reqEditLabel.BackColor = System.Drawing.Color.Transparent;
+            this.reqEditLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqEditLabel.Location = new System.Drawing.Point(270, 30);
+            this.reqEditLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.reqEditLabel.Name = "reqEditLabel";
+            this.reqEditLabel.Size = new System.Drawing.Size(331, 45);
+            this.reqEditLabel.TabIndex = 32;
+            this.reqEditLabel.Text = "Επεξεργασία αίτησης";
+            this.reqEditLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +294,7 @@
             this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(854, 631);
+            this.Controls.Add(this.reqEditLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label8);
@@ -298,7 +313,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -326,5 +341,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label reqEditLabel;
     }
 }
