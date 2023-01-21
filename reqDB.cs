@@ -10,15 +10,20 @@ namespace myKEP
     internal class reqDB
     {
         [PrimaryKey, AutoIncrement]
-        public int userID { get; set; }
+        public int ID { get; set; }
         public string Type { get; set; }
         public string Date { get; set; }
+        public string AT { get; set; }
+        public int reqID { get; set; }
 
-        reqDB(int id, string type, string date)
+        
+
+        reqDB(int user, string type, string date, string userID, int ID)
         {
-            userID = id;
             Type = type;
             Date = date;
+            AT = userID;
+            reqID = ID;
         }
 
 

@@ -18,10 +18,12 @@ namespace myKEP
         public string Phone { get; set; }
         public string DateOfBirth { get; set; }
         public string Address { get; set; }
+
+        public string AT { get; set; }
         public int reqNo { get; set; }
         
 
-        usersDB (string name, string surname, string email, string phone, string dob, string address, int no)
+        usersDB (string name, string surname, string email, string phone, string dob, string address, string ID, int no)
         {
             Name = name;
             Surname = surname;
@@ -29,6 +31,7 @@ namespace myKEP
             Phone = phone;
             DateOfBirth = dob;
             Address = address;
+            AT = ID;
             reqNo = no;
         }
 
