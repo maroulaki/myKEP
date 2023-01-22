@@ -176,6 +176,7 @@ namespace myKEP
         private void list_Click(object sender, EventArgs e)
         {
             hideHomeElements();
+            listOption.Location = new Point()
         }
 
         private void delete_Click(object sender, EventArgs e)
