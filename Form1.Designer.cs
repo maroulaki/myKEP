@@ -56,8 +56,8 @@
             this.typeManu = new System.Windows.Forms.ComboBox();
             this.dobPicker = new System.Windows.Forms.DateTimePicker();
             this.addressText = new System.Windows.Forms.TextBox();
-            this.reqEnter = new System.Windows.Forms.Button();
-            this.reqEdit = new System.Windows.Forms.Button();
+            this.reqEnterButton = new System.Windows.Forms.Button();
+            this.reqEditButton = new System.Windows.Forms.Button();
             this.reqEditLabel = new System.Windows.Forms.Label();
             this.prevDateLabel = new System.Windows.Forms.Label();
             this.listOption = new System.Windows.Forms.ComboBox();
@@ -231,6 +231,7 @@
             this.emailLabel.Size = new System.Drawing.Size(48, 21);
             this.emailLabel.TabIndex = 21;
             this.emailLabel.Text = "Email";
+            this.emailLabel.Visible = false;
             // 
             // surnameLabel
             // 
@@ -243,6 +244,7 @@
             this.surnameLabel.Size = new System.Drawing.Size(76, 21);
             this.surnameLabel.TabIndex = 20;
             this.surnameLabel.Text = "Επώνυμο";
+            this.surnameLabel.Visible = false;
             // 
             // phoneLabel
             // 
@@ -255,6 +257,7 @@
             this.phoneLabel.Size = new System.Drawing.Size(83, 21);
             this.phoneLabel.TabIndex = 19;
             this.phoneLabel.Text = "Τηλέφωνο";
+            this.phoneLabel.Visible = false;
             // 
             // nameLabel
             // 
@@ -267,6 +270,7 @@
             this.nameLabel.Size = new System.Drawing.Size(62, 21);
             this.nameLabel.TabIndex = 18;
             this.nameLabel.Text = "\'Ονομα";
+            this.nameLabel.Visible = false;
             // 
             // emailText
             // 
@@ -277,6 +281,7 @@
             this.emailText.Name = "emailText";
             this.emailText.Size = new System.Drawing.Size(149, 29);
             this.emailText.TabIndex = 17;
+            this.emailText.Visible = false;
             // 
             // phoneText
             // 
@@ -287,6 +292,7 @@
             this.phoneText.Name = "phoneText";
             this.phoneText.Size = new System.Drawing.Size(149, 29);
             this.phoneText.TabIndex = 16;
+            this.phoneText.Visible = false;
             // 
             // surnameText
             // 
@@ -297,6 +303,7 @@
             this.surnameText.Name = "surnameText";
             this.surnameText.Size = new System.Drawing.Size(149, 29);
             this.surnameText.TabIndex = 15;
+            this.surnameText.Visible = false;
             // 
             // nameText
             // 
@@ -307,6 +314,7 @@
             this.nameText.Name = "nameText";
             this.nameText.Size = new System.Drawing.Size(149, 29);
             this.nameText.TabIndex = 14;
+            this.nameText.Visible = false;
             // 
             // newReqLabel
             // 
@@ -318,8 +326,10 @@
             this.newReqLabel.Name = "newReqLabel";
             this.newReqLabel.Size = new System.Drawing.Size(190, 45);
             this.newReqLabel.TabIndex = 22;
+            this.newReqLabel.Tag = "";
             this.newReqLabel.Text = "Νέα αίτηση";
             this.newReqLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.newReqLabel.Visible = false;
             // 
             // typeLabel
             // 
@@ -332,6 +342,7 @@
             this.typeLabel.Size = new System.Drawing.Size(113, 21);
             this.typeLabel.TabIndex = 28;
             this.typeLabel.Text = "Τύπος αίτησης";
+            this.typeLabel.Visible = false;
             // 
             // addressLabel
             // 
@@ -344,6 +355,7 @@
             this.addressLabel.Size = new System.Drawing.Size(242, 42);
             this.addressLabel.TabIndex = 27;
             this.addressLabel.Text = "Διεύθυνση κατοικίας\r\n(Νομός, Πόλη, Οδός, Αριθμός, ΤΚ)\r\n";
+            this.addressLabel.Visible = false;
             // 
             // dobLabel
             // 
@@ -356,6 +368,7 @@
             this.dobLabel.Size = new System.Drawing.Size(164, 21);
             this.dobLabel.TabIndex = 26;
             this.dobLabel.Text = "Ημερομηνία γέννησης";
+            this.dobLabel.Visible = false;
             // 
             // typeManu
             // 
@@ -373,6 +386,7 @@
             this.typeManu.Name = "typeManu";
             this.typeManu.Size = new System.Drawing.Size(218, 25);
             this.typeManu.TabIndex = 25;
+            this.typeManu.Visible = false;
             // 
             // dobPicker
             // 
@@ -382,6 +396,7 @@
             this.dobPicker.Name = "dobPicker";
             this.dobPicker.Size = new System.Drawing.Size(152, 20);
             this.dobPicker.TabIndex = 24;
+            this.dobPicker.Visible = false;
             // 
             // addressText
             // 
@@ -392,38 +407,41 @@
             this.addressText.Name = "addressText";
             this.addressText.Size = new System.Drawing.Size(238, 29);
             this.addressText.TabIndex = 23;
+            this.addressText.Visible = false;
             // 
-            // reqEnter
+            // reqEnterButton
             // 
-            this.reqEnter.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.reqEnter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reqEnter.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.reqEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reqEnter.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.reqEnter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.reqEnter.Location = new System.Drawing.Point(608, 277);
-            this.reqEnter.Margin = new System.Windows.Forms.Padding(0);
-            this.reqEnter.Name = "reqEnter";
-            this.reqEnter.Size = new System.Drawing.Size(182, 35);
-            this.reqEnter.TabIndex = 29;
-            this.reqEnter.Text = "Καταχώριση";
-            this.reqEnter.UseVisualStyleBackColor = false;
+            this.reqEnterButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.reqEnterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reqEnterButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.reqEnterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reqEnterButton.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqEnterButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.reqEnterButton.Location = new System.Drawing.Point(608, 277);
+            this.reqEnterButton.Margin = new System.Windows.Forms.Padding(0);
+            this.reqEnterButton.Name = "reqEnterButton";
+            this.reqEnterButton.Size = new System.Drawing.Size(182, 35);
+            this.reqEnterButton.TabIndex = 29;
+            this.reqEnterButton.Text = "Καταχώριση";
+            this.reqEnterButton.UseVisualStyleBackColor = false;
+            this.reqEnterButton.Visible = false;
             // 
-            // reqEdit
+            // reqEditButton
             // 
-            this.reqEdit.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.reqEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reqEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.reqEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reqEdit.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.reqEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.reqEdit.Location = new System.Drawing.Point(608, 331);
-            this.reqEdit.Margin = new System.Windows.Forms.Padding(0);
-            this.reqEdit.Name = "reqEdit";
-            this.reqEdit.Size = new System.Drawing.Size(182, 35);
-            this.reqEdit.TabIndex = 30;
-            this.reqEdit.Text = "Ενημέρωση";
-            this.reqEdit.UseVisualStyleBackColor = false;
+            this.reqEditButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.reqEditButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reqEditButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.reqEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reqEditButton.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqEditButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.reqEditButton.Location = new System.Drawing.Point(608, 331);
+            this.reqEditButton.Margin = new System.Windows.Forms.Padding(0);
+            this.reqEditButton.Name = "reqEditButton";
+            this.reqEditButton.Size = new System.Drawing.Size(182, 35);
+            this.reqEditButton.TabIndex = 30;
+            this.reqEditButton.Text = "Ενημέρωση";
+            this.reqEditButton.UseVisualStyleBackColor = false;
+            this.reqEditButton.Visible = false;
             // 
             // reqEditLabel
             // 
@@ -437,18 +455,21 @@
             this.reqEditLabel.TabIndex = 31;
             this.reqEditLabel.Text = "Επεξεργασία αίτησης";
             this.reqEditLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.reqEditLabel.Visible = false;
             // 
             // prevDateLabel
             // 
             this.prevDateLabel.AutoSize = true;
             this.prevDateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.prevDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.prevDateLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.prevDateLabel.ForeColor = System.Drawing.Color.Maroon;
             this.prevDateLabel.Location = new System.Drawing.Point(604, 65);
             this.prevDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.prevDateLabel.Name = "prevDateLabel";
-            this.prevDateLabel.Size = new System.Drawing.Size(148, 21);
+            this.prevDateLabel.Size = new System.Drawing.Size(123, 17);
             this.prevDateLabel.TabIndex = 32;
             this.prevDateLabel.Text = "(Καταγεγραμμένη: )";
+            this.prevDateLabel.Visible = false;
             // 
             // listOption
             // 
@@ -462,6 +483,7 @@
             this.listOption.Name = "listOption";
             this.listOption.Size = new System.Drawing.Size(218, 33);
             this.listOption.TabIndex = 33;
+            this.listOption.Visible = false;
             // 
             // listOptionButton
             // 
@@ -478,6 +500,7 @@
             this.listOptionButton.TabIndex = 34;
             this.listOptionButton.Text = "Επιλογή";
             this.listOptionButton.UseVisualStyleBackColor = false;
+            this.listOptionButton.Visible = false;
             // 
             // reqDelLabel
             // 
@@ -491,6 +514,7 @@
             this.reqDelLabel.TabIndex = 35;
             this.reqDelLabel.Text = "Διαγραφή αίτησης";
             this.reqDelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.reqDelLabel.Visible = false;
             // 
             // delButton
             // 
@@ -507,18 +531,20 @@
             this.delButton.TabIndex = 44;
             this.delButton.Text = "Διαγραφή";
             this.delButton.UseVisualStyleBackColor = false;
+            this.delButton.Visible = false;
             // 
             // reqIDLabel
             // 
             this.reqIDLabel.AutoSize = true;
             this.reqIDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.reqIDLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.reqIDLabel.Location = new System.Drawing.Point(11, 382);
+            this.reqIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.reqIDLabel.Location = new System.Drawing.Point(12, 386);
             this.reqIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reqIDLabel.Name = "reqIDLabel";
-            this.reqIDLabel.Size = new System.Drawing.Size(157, 25);
+            this.reqIDLabel.Size = new System.Drawing.Size(129, 21);
             this.reqIDLabel.TabIndex = 43;
             this.reqIDLabel.Text = "Κωδικός αίτησης";
+            this.reqIDLabel.Visible = false;
             // 
             // reqIDText
             // 
@@ -529,6 +555,7 @@
             this.reqIDText.Name = "reqIDText";
             this.reqIDText.Size = new System.Drawing.Size(182, 29);
             this.reqIDText.TabIndex = 42;
+            this.reqIDText.Visible = false;
             // 
             // DelByATButton
             // 
@@ -545,18 +572,20 @@
             this.DelByATButton.TabIndex = 47;
             this.DelByATButton.Text = "Προβολή αιτήσεων \r\nγια διαγραφή\r\n";
             this.DelByATButton.UseVisualStyleBackColor = false;
+            this.DelByATButton.Visible = false;
             // 
             // ATLabel
             // 
             this.ATLabel.AutoSize = true;
             this.ATLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ATLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.ATLabel.Location = new System.Drawing.Point(108, 483);
+            this.ATLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ATLabel.Location = new System.Drawing.Point(109, 487);
             this.ATLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ATLabel.Name = "ATLabel";
-            this.ATLabel.Size = new System.Drawing.Size(190, 25);
+            this.ATLabel.Size = new System.Drawing.Size(157, 21);
             this.ATLabel.TabIndex = 46;
             this.ATLabel.Text = "Αριθμός Ταυτότητας";
+            this.ATLabel.Visible = false;
             // 
             // ATText
             // 
@@ -567,6 +596,7 @@
             this.ATText.Name = "ATText";
             this.ATText.Size = new System.Drawing.Size(182, 29);
             this.ATText.TabIndex = 45;
+            this.ATText.Visible = false;
             // 
             // Form1
             // 
@@ -587,8 +617,8 @@
             this.Controls.Add(this.listOption);
             this.Controls.Add(this.prevDateLabel);
             this.Controls.Add(this.reqEditLabel);
-            this.Controls.Add(this.reqEdit);
-            this.Controls.Add(this.reqEnter);
+            this.Controls.Add(this.reqEditButton);
+            this.Controls.Add(this.reqEnterButton);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.dobLabel);
@@ -661,8 +691,8 @@
         private System.Windows.Forms.ComboBox typeManu;
         private System.Windows.Forms.DateTimePicker dobPicker;
         private System.Windows.Forms.TextBox addressText;
-        private System.Windows.Forms.Button reqEnter;
-        private System.Windows.Forms.Button reqEdit;
+        private System.Windows.Forms.Button reqEnterButton;
+        private System.Windows.Forms.Button reqEditButton;
         private System.Windows.Forms.Label reqEditLabel;
         private System.Windows.Forms.Label prevDateLabel;
         private System.Windows.Forms.ComboBox listOption;

@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.reqDelLabel = new System.Windows.Forms.Label();
-            this.surnameText = new System.Windows.Forms.TextBox();
-            this.surnameLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listOptionButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.prevDateLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.dobLabel = new System.Windows.Forms.Label();
+            this.dobPicker = new System.Windows.Forms.DateTimePicker();
+            this.addressText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // reqDelLabel
@@ -50,84 +49,65 @@
             this.reqDelLabel.Text = "Διαγραφή αίτησης";
             this.reqDelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // surnameText
+            // prevDateLabel
             // 
-            this.surnameText.BackColor = System.Drawing.SystemColors.Window;
-            this.surnameText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.surnameText.Location = new System.Drawing.Point(150, 257);
-            this.surnameText.Margin = new System.Windows.Forms.Padding(2);
-            this.surnameText.Name = "surnameText";
-            this.surnameText.Size = new System.Drawing.Size(182, 29);
-            this.surnameText.TabIndex = 37;
+            this.prevDateLabel.AutoSize = true;
+            this.prevDateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.prevDateLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.prevDateLabel.Location = new System.Drawing.Point(631, 153);
+            this.prevDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.prevDateLabel.Name = "prevDateLabel";
+            this.prevDateLabel.Size = new System.Drawing.Size(123, 17);
+            this.prevDateLabel.TabIndex = 47;
+            this.prevDateLabel.Text = "(Καταγεγραμμένη: )";
+            this.prevDateLabel.Visible = false;
             // 
-            // surnameLabel
+            // addressLabel
             // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.surnameLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.surnameLabel.Location = new System.Drawing.Point(145, 230);
-            this.surnameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(157, 25);
-            this.surnameLabel.TabIndex = 38;
-            this.surnameLabel.Text = "Κωδικός αίτησης";
-            this.surnameLabel.Click += new System.EventHandler(this.surnameLabel_Click);
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.Transparent;
+            this.addressLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.addressLabel.Location = new System.Drawing.Point(471, 186);
+            this.addressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(242, 42);
+            this.addressLabel.TabIndex = 46;
+            this.addressLabel.Text = "Διεύθυνση κατοικίας\r\n(Νομός, Πόλη, Οδός, Αριθμός, ΤΚ)\r\n";
+            this.addressLabel.Visible = false;
             // 
-            // textBox1
+            // dobLabel
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox1.Location = new System.Drawing.Point(505, 257);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 29);
-            this.textBox1.TabIndex = 39;
+            this.dobLabel.AutoSize = true;
+            this.dobLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dobLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.dobLabel.Location = new System.Drawing.Point(471, 127);
+            this.dobLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dobLabel.Name = "dobLabel";
+            this.dobLabel.Size = new System.Drawing.Size(164, 21);
+            this.dobLabel.TabIndex = 45;
+            this.dobLabel.Text = "Ημερομηνία γέννησης";
+            this.dobLabel.Visible = false;
             // 
-            // label1
+            // dobPicker
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(500, 230);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 25);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Αριθμός Ταυτότητας";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.dobPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dobPicker.Location = new System.Drawing.Point(475, 150);
+            this.dobPicker.Margin = new System.Windows.Forms.Padding(2);
+            this.dobPicker.Name = "dobPicker";
+            this.dobPicker.Size = new System.Drawing.Size(152, 20);
+            this.dobPicker.TabIndex = 44;
+            this.dobPicker.Visible = false;
             // 
-            // listOptionButton
+            // addressText
             // 
-            this.listOptionButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.listOptionButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listOptionButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.listOptionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.listOptionButton.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.listOptionButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.listOptionButton.Location = new System.Drawing.Point(150, 315);
-            this.listOptionButton.Margin = new System.Windows.Forms.Padding(0);
-            this.listOptionButton.Name = "listOptionButton";
-            this.listOptionButton.Size = new System.Drawing.Size(182, 35);
-            this.listOptionButton.TabIndex = 41;
-            this.listOptionButton.Text = "Διαγραφή";
-            this.listOptionButton.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(505, 315);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 57);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Προβολή αιτήσεων \r\nγια διαγραφή\r\n";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addressText.BackColor = System.Drawing.SystemColors.Window;
+            this.addressText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.addressText.Location = new System.Drawing.Point(310, 362);
+            this.addressText.Margin = new System.Windows.Forms.Padding(2);
+            this.addressText.Name = "addressText";
+            this.addressText.Size = new System.Drawing.Size(238, 29);
+            this.addressText.TabIndex = 43;
+            this.addressText.Visible = false;
             // 
             // Form2
             // 
@@ -136,12 +116,11 @@
             this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(854, 631);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listOptionButton);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.surnameLabel);
-            this.Controls.Add(this.surnameText);
+            this.Controls.Add(this.prevDateLabel);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.dobLabel);
+            this.Controls.Add(this.dobPicker);
+            this.Controls.Add(this.addressText);
             this.Controls.Add(this.reqDelLabel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
@@ -155,11 +134,10 @@
         #endregion
 
         private System.Windows.Forms.Label reqDelLabel;
-        private System.Windows.Forms.TextBox surnameText;
-        private System.Windows.Forms.Label surnameLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button listOptionButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label prevDateLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label dobLabel;
+        private System.Windows.Forms.DateTimePicker dobPicker;
+        private System.Windows.Forms.TextBox addressText;
     }
 }
