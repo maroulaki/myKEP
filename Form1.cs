@@ -67,7 +67,11 @@ namespace myKEP
 
         private void initDB()
         {
-            if (!System.IO.File.Exists("KEP.db"))
+            if (System.IO.File.Exists("KEP.db"))
+            {
+
+            } 
+            else
             {
                 var kepDB = new SQLiteConnection("KEP.db");
                 kepDB.CreateTable<usersDB>();
