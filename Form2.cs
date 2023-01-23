@@ -92,17 +92,42 @@ namespace myKEP
 
         }
 
-        private void surnameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reqEnterButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prevDateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reqEditLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reqDelLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
