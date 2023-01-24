@@ -13,6 +13,10 @@ namespace myKEP
         public Form1()
         {
             InitializeComponent();
+            this.Controls.Add(newReqPanel);
+            this.Controls.Add(editReqPanel);
+            this.Controls.Add(delReqPanel);
+
             //initControlLists();
             //initPointLists();
         }
@@ -147,62 +151,62 @@ namespace myKEP
 
         private void addText_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
-            newReqPanel.Visible = true;
+            newReqPanel.BringToFront();
         }
 
         private void delText_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
-            delReqPanel.Visible = true;
+            delReqPanel.BringToFront();
         }
 
         private void add_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
-            newReqPanel.Visible = true;
+            newReqPanel.BringToFront();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
-            editReqPanel.Visible = true;
+            editReqPanel.BringToFront();
         }
 
         private void list_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
 
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
-            delReqPanel.Visible = true;
+            delReqPanel.BringToFront();
         }
 
         private void editText_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
-            editReqPanel.Visible = true;
+            editReqPanel.BringToFront();
         }
 
         private void listText_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = false;
+            homePanel.SendToBack();
             back.Visible = true;
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            homePanel.Visible = true;
+            homePanel.BringToFront();
             back.Visible = false;
         }
 
@@ -212,6 +216,16 @@ namespace myKEP
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void newReqPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void reqEditLabel_Click(object sender, EventArgs e)
         {
 
         }

@@ -54,10 +54,10 @@
             this.reqEnterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reqEnterButton.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.reqEnterButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.reqEnterButton.Location = new System.Drawing.Point(315, 521);
+            this.reqEnterButton.Location = new System.Drawing.Point(285, 464);
             this.reqEnterButton.Margin = new System.Windows.Forms.Padding(0);
             this.reqEnterButton.Name = "reqEnterButton";
-            this.reqEnterButton.Size = new System.Drawing.Size(182, 35);
+            this.reqEnterButton.Size = new System.Drawing.Size(243, 43);
             this.reqEnterButton.TabIndex = 71;
             this.reqEnterButton.Text = "Καταχώριση";
             this.reqEnterButton.UseVisualStyleBackColor = false;
@@ -67,10 +67,9 @@
             this.typeLabel.AutoSize = true;
             this.typeLabel.BackColor = System.Drawing.Color.Transparent;
             this.typeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.typeLabel.Location = new System.Drawing.Point(450, 339);
-            this.typeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.typeLabel.Location = new System.Drawing.Point(357, 377);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(113, 21);
+            this.typeLabel.Size = new System.Drawing.Size(144, 28);
             this.typeLabel.TabIndex = 70;
             this.typeLabel.Text = "Τύπος αίτησης";
             // 
@@ -79,10 +78,9 @@
             this.addressLabel.AutoSize = true;
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
             this.addressLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.addressLabel.Location = new System.Drawing.Point(450, 234);
-            this.addressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addressLabel.Location = new System.Drawing.Point(357, 248);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(242, 42);
+            this.addressLabel.Size = new System.Drawing.Size(313, 56);
             this.addressLabel.TabIndex = 69;
             this.addressLabel.Text = "Διεύθυνση κατοικίας\r\n(Νομός, Πόλη, Οδός, Αριθμός, ΤΚ)\r\n";
             // 
@@ -91,10 +89,9 @@
             this.dobLabel.AutoSize = true;
             this.dobLabel.BackColor = System.Drawing.Color.Transparent;
             this.dobLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.dobLabel.Location = new System.Drawing.Point(450, 155);
-            this.dobLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dobLabel.Location = new System.Drawing.Point(357, 151);
             this.dobLabel.Name = "dobLabel";
-            this.dobLabel.Size = new System.Drawing.Size(164, 21);
+            this.dobLabel.Size = new System.Drawing.Size(214, 28);
             this.dobLabel.TabIndex = 68;
             this.dobLabel.Text = "Ημερομηνία γέννησης";
             // 
@@ -109,29 +106,29 @@
             "Αποποίηση κληρονομιάς",
             "Διαγραφή από μητρώο",
             "Νέο μισθωτήριο κατοικίας"});
-            this.typeManu.Location = new System.Drawing.Point(454, 364);
-            this.typeManu.Margin = new System.Windows.Forms.Padding(2);
+            this.typeManu.Location = new System.Drawing.Point(362, 408);
+            this.typeManu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.typeManu.Name = "typeManu";
-            this.typeManu.Size = new System.Drawing.Size(218, 25);
+            this.typeManu.Size = new System.Drawing.Size(289, 29);
             this.typeManu.TabIndex = 67;
             // 
             // dobPicker
             // 
             this.dobPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dobPicker.Location = new System.Drawing.Point(454, 178);
-            this.dobPicker.Margin = new System.Windows.Forms.Padding(2);
+            this.dobPicker.Location = new System.Drawing.Point(362, 179);
+            this.dobPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dobPicker.Name = "dobPicker";
-            this.dobPicker.Size = new System.Drawing.Size(152, 20);
+            this.dobPicker.Size = new System.Drawing.Size(201, 22);
             this.dobPicker.TabIndex = 66;
             // 
             // addressText
             // 
             this.addressText.BackColor = System.Drawing.SystemColors.Window;
             this.addressText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.addressText.Location = new System.Drawing.Point(454, 278);
-            this.addressText.Margin = new System.Windows.Forms.Padding(2);
+            this.addressText.Location = new System.Drawing.Point(362, 302);
+            this.addressText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addressText.Name = "addressText";
-            this.addressText.Size = new System.Drawing.Size(238, 29);
+            this.addressText.Size = new System.Drawing.Size(316, 33);
             this.addressText.TabIndex = 65;
             // 
             // emailLabel
@@ -139,10 +136,9 @@
             this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.emailLabel.Location = new System.Drawing.Point(197, 395);
-            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emailLabel.Location = new System.Drawing.Point(20, 446);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(48, 21);
+            this.emailLabel.Size = new System.Drawing.Size(59, 28);
             this.emailLabel.TabIndex = 64;
             this.emailLabel.Text = "Email";
             // 
@@ -151,10 +147,9 @@
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.nameLabel.Location = new System.Drawing.Point(197, 155);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLabel.Location = new System.Drawing.Point(20, 151);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(62, 21);
+            this.nameLabel.Size = new System.Drawing.Size(79, 28);
             this.nameLabel.TabIndex = 63;
             this.nameLabel.Text = "\'Ονομα";
             // 
@@ -163,10 +158,9 @@
             this.newReqLabel.AutoSize = true;
             this.newReqLabel.BackColor = System.Drawing.Color.Transparent;
             this.newReqLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.newReqLabel.Location = new System.Drawing.Point(307, 40);
-            this.newReqLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.newReqLabel.Location = new System.Drawing.Point(166, 9);
             this.newReqLabel.Name = "newReqLabel";
-            this.newReqLabel.Size = new System.Drawing.Size(190, 45);
+            this.newReqLabel.Size = new System.Drawing.Size(224, 51);
             this.newReqLabel.TabIndex = 62;
             this.newReqLabel.Tag = "";
             this.newReqLabel.Text = "Νέα αίτηση";
@@ -177,10 +171,9 @@
             this.surnameLabel.AutoSize = true;
             this.surnameLabel.BackColor = System.Drawing.Color.Transparent;
             this.surnameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.surnameLabel.Location = new System.Drawing.Point(197, 235);
-            this.surnameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.surnameLabel.Location = new System.Drawing.Point(20, 249);
             this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(76, 21);
+            this.surnameLabel.Size = new System.Drawing.Size(97, 28);
             this.surnameLabel.TabIndex = 61;
             this.surnameLabel.Text = "Επώνυμο";
             // 
@@ -189,10 +182,9 @@
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.phoneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.phoneLabel.Location = new System.Drawing.Point(197, 315);
-            this.phoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.phoneLabel.Location = new System.Drawing.Point(20, 348);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(83, 21);
+            this.phoneLabel.Size = new System.Drawing.Size(106, 28);
             this.phoneLabel.TabIndex = 60;
             this.phoneLabel.Text = "Τηλέφωνο";
             // 
@@ -200,49 +192,49 @@
             // 
             this.emailText.BackColor = System.Drawing.SystemColors.Window;
             this.emailText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.emailText.Location = new System.Drawing.Point(201, 418);
-            this.emailText.Margin = new System.Windows.Forms.Padding(2);
+            this.emailText.Location = new System.Drawing.Point(25, 474);
+            this.emailText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailText.Name = "emailText";
-            this.emailText.Size = new System.Drawing.Size(149, 29);
+            this.emailText.Size = new System.Drawing.Size(197, 33);
             this.emailText.TabIndex = 59;
             // 
             // phoneText
             // 
             this.phoneText.BackColor = System.Drawing.SystemColors.Window;
             this.phoneText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.phoneText.Location = new System.Drawing.Point(201, 338);
-            this.phoneText.Margin = new System.Windows.Forms.Padding(2);
+            this.phoneText.Location = new System.Drawing.Point(25, 376);
+            this.phoneText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phoneText.Name = "phoneText";
-            this.phoneText.Size = new System.Drawing.Size(149, 29);
+            this.phoneText.Size = new System.Drawing.Size(197, 33);
             this.phoneText.TabIndex = 58;
             // 
             // surnameText
             // 
             this.surnameText.BackColor = System.Drawing.SystemColors.Window;
             this.surnameText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.surnameText.Location = new System.Drawing.Point(201, 258);
-            this.surnameText.Margin = new System.Windows.Forms.Padding(2);
+            this.surnameText.Location = new System.Drawing.Point(25, 278);
+            this.surnameText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.surnameText.Name = "surnameText";
-            this.surnameText.Size = new System.Drawing.Size(149, 29);
+            this.surnameText.Size = new System.Drawing.Size(197, 33);
             this.surnameText.TabIndex = 57;
             // 
             // nameText
             // 
             this.nameText.BackColor = System.Drawing.SystemColors.Window;
             this.nameText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.nameText.Location = new System.Drawing.Point(201, 178);
-            this.nameText.Margin = new System.Windows.Forms.Padding(2);
+            this.nameText.Location = new System.Drawing.Point(25, 179);
+            this.nameText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(149, 29);
+            this.nameText.Size = new System.Drawing.Size(197, 33);
             this.nameText.TabIndex = 56;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(854, 631);
+            this.ClientSize = new System.Drawing.Size(1024, 690);
             this.Controls.Add(this.reqEnterButton);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.addressLabel);
@@ -259,7 +251,7 @@
             this.Controls.Add(this.phoneText);
             this.Controls.Add(this.surnameText);
             this.Controls.Add(this.nameText);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
