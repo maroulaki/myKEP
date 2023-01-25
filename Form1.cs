@@ -154,8 +154,9 @@ namespace myKEP
             homePanel.SendToBack();
             back.Visible = true;
             newReqPanel.BringToFront();
+            newReqPanel.Show();
         }
-
+       
         private void delText_Click(object sender, EventArgs e)
         {
             homePanel.SendToBack();
@@ -168,6 +169,7 @@ namespace myKEP
             homePanel.SendToBack();
             back.Visible = true;
             newReqPanel.BringToFront();
+            newReqPanel.Show();
         }
 
         private void edit_Click(object sender, EventArgs e)
