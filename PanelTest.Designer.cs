@@ -57,11 +57,12 @@
             this.delText.BackColor = System.Drawing.Color.Transparent;
             this.delText.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.delText.Location = new System.Drawing.Point(63, 221);
+            this.delText.Location = new System.Drawing.Point(78, 282);
             this.delText.Name = "delText";
             this.delText.Size = new System.Drawing.Size(199, 60);
             this.delText.TabIndex = 32;
             this.delText.Text = "Διαγραφή αίτησης\r\n\r\n";
+            
             // 
             // listText
             // 
@@ -69,7 +70,7 @@
             this.listText.BackColor = System.Drawing.Color.Transparent;
             this.listText.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.listText.Location = new System.Drawing.Point(63, 156);
+            this.listText.Location = new System.Drawing.Point(78, 199);
             this.listText.Name = "listText";
             this.listText.Size = new System.Drawing.Size(207, 60);
             this.listText.TabIndex = 31;
@@ -81,7 +82,7 @@
             this.editText.BackColor = System.Drawing.Color.Transparent;
             this.editText.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.editText.Location = new System.Drawing.Point(63, 91);
+            this.editText.Location = new System.Drawing.Point(78, 123);
             this.editText.Name = "editText";
             this.editText.Size = new System.Drawing.Size(225, 60);
             this.editText.TabIndex = 30;
@@ -93,9 +94,9 @@
             this.edit.BackgroundImage = global::myKEP.Properties.Resources.edit;
             this.edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edit.Location = new System.Drawing.Point(16, 93);
+            this.edit.Location = new System.Drawing.Point(12, 106);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(30, 30);
+            this.edit.Size = new System.Drawing.Size(60, 60);
             this.edit.TabIndex = 29;
             this.edit.TabStop = false;
             // 
@@ -105,11 +106,12 @@
             this.list.BackgroundImage = global::myKEP.Properties.Resources.list;
             this.list.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.list.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.list.Location = new System.Drawing.Point(16, 158);
+            this.list.Location = new System.Drawing.Point(12, 186);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(30, 30);
+            this.list.Size = new System.Drawing.Size(60, 60);
             this.list.TabIndex = 28;
             this.list.TabStop = false;
+            this.list.Click += new System.EventHandler(this.list_Click);
             // 
             // delete
             // 
@@ -117,9 +119,9 @@
             this.delete.BackgroundImage = global::myKEP.Properties.Resources.trash;
             this.delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delete.Location = new System.Drawing.Point(16, 223);
+            this.delete.Location = new System.Drawing.Point(12, 266);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(30, 30);
+            this.delete.Size = new System.Drawing.Size(60, 60);
             this.delete.TabIndex = 27;
             this.delete.TabStop = false;
             // 
@@ -129,9 +131,9 @@
             this.add.BackgroundImage = global::myKEP.Properties.Resources.add;
             this.add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add.Location = new System.Drawing.Point(16, 28);
+            this.add.Location = new System.Drawing.Point(12, 28);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(30, 30);
+            this.add.Size = new System.Drawing.Size(60, 60);
             this.add.TabIndex = 26;
             this.add.TabStop = false;
             this.add.Click += new System.EventHandler(this.add_Click);
@@ -142,7 +144,7 @@
             this.addText.BackColor = System.Drawing.Color.Transparent;
             this.addText.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.addText.Location = new System.Drawing.Point(63, 28);
+            this.addText.Location = new System.Drawing.Point(78, 43);
             this.addText.Name = "addText";
             this.addText.Size = new System.Drawing.Size(205, 30);
             this.addText.TabIndex = 25;
@@ -152,12 +154,12 @@
             // 
             this.welcome.AutoSize = true;
             this.welcome.BackColor = System.Drawing.Color.Transparent;
-            this.welcome.Font = new System.Drawing.Font("Segoe UI", 16.27826F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.welcome.Location = new System.Drawing.Point(122, 55);
+            this.welcome.Font = new System.Drawing.Font("Segoe UI Semibold", 21.91304F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.welcome.Location = new System.Drawing.Point(107, 77);
             this.welcome.Name = "welcome";
-            this.welcome.Size = new System.Drawing.Size(212, 72);
+            this.welcome.Size = new System.Drawing.Size(266, 47);
             this.welcome.TabIndex = 24;
-            this.welcome.Text = "Καλώς ορίσατε \r\nστο myKEP";
+            this.welcome.Text = "Καλώς ορίσατε";
             this.welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.welcome.Click += new System.EventHandler(this.welcome_Click);
             // 
@@ -183,8 +185,8 @@
             this.Head.Dock = System.Windows.Forms.DockStyle.Top;
             this.Head.Location = new System.Drawing.Point(0, 0);
             this.Head.Name = "Head";
-            this.Head.Size = new System.Drawing.Size(1182, 127);
-            this.Head.TabIndex = 33;
+            this.Head.Size = new System.Drawing.Size(1182, 128);
+            this.Head.TabIndex = 1;
             this.Head.Paint += new System.Windows.Forms.PaintEventHandler(this.Head_Paint);
             // 
             // Screen
@@ -192,10 +194,10 @@
             this.Screen.BackColor = System.Drawing.Color.Transparent;
             this.Screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Screen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Screen.Location = new System.Drawing.Point(294, 127);
+            this.Screen.Location = new System.Drawing.Point(300, 128);
             this.Screen.Name = "Screen";
-            this.Screen.Size = new System.Drawing.Size(888, 628);
-            this.Screen.TabIndex = 35;
+            this.Screen.Size = new System.Drawing.Size(882, 627);
+            this.Screen.TabIndex = 0;
             this.Screen.Paint += new System.Windows.Forms.PaintEventHandler(this.Screen_Paint);
             // 
             // Sidebar
@@ -210,9 +212,9 @@
             this.Sidebar.Controls.Add(this.list);
             this.Sidebar.Controls.Add(this.edit);
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Sidebar.Location = new System.Drawing.Point(0, 127);
+            this.Sidebar.Location = new System.Drawing.Point(0, 128);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(294, 628);
+            this.Sidebar.Size = new System.Drawing.Size(302, 627);
             this.Sidebar.TabIndex = 34;
             // 
             // PanelTest

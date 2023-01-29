@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace myKEP
 {
-    internal class reqDB
+    public class reqDB
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
@@ -18,7 +18,7 @@ namespace myKEP
 
         
 
-        reqDB(int user, string type, string date, string userID, int ID)
+        public reqDB(int user, string type, string date, string userID, int ID)
         {
             Type = type;
             Date = date;

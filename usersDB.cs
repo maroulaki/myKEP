@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace myKEP
 {
-    internal class usersDB
+    public class usersDB
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; } 
@@ -23,7 +23,7 @@ namespace myKEP
         public int reqNo { get; set; }
         
 
-        usersDB (string name, string surname, string email, string phone, string dob, string address, string ID, int no)
+        public usersDB (string name, string surname, string email, string phone, string dob, string address, string ID, int no)
         {
             Name = name;
             Surname = surname;

@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace myKEP
@@ -16,9 +8,11 @@ namespace myKEP
         public PanelTest()
         {
             InitializeComponent();
+            KEPdb = new DBHandler();
+            //KEPdb.initDB();
         }
         private Form currentForm;
-        
+        private DBHandler KEPdb;
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -62,7 +56,13 @@ namespace myKEP
 
         private void add_Click(object sender, EventArgs e)
         {
-            SelectForm(new Form1());
+            SelectForm(new NewReq());
         }
+
+        private void list_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

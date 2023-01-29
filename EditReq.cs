@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace myKEP
 {
-    public partial class Form3 : Form
+    public partial class EditReq : Form
     {
-        public Form3()
+        public EditReq()
         {
             InitializeComponent();
         }
