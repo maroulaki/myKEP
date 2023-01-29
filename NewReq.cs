@@ -14,30 +14,30 @@ namespace myKEP
         public NewReq()
         {
             InitializeComponent();
-            
+            KEPdb = new DBHandler();
         }
-
+        private DBHandler KEPdb;
        
 
         private void myKEP_Load(object sender, EventArgs e)
         {
-            initDB();
+            
         }
 
-        private void initDB()
-        {
-            if (System.IO.File.Exists("KEP.db"))
-            {
+        //private void initDB()
+        //{
+        //    if (System.IO.File.Exists("KEP.db"))
+        //    {
 
-            } 
-            else
-            {
-                var kepDB = new SQLiteConnection("KEP.db");
-                kepDB.CreateTable<usersDB>();
-                kepDB.CreateTable<reqDB>();
-                kepDB.Close();
-            }
-        }
+        //    } 
+        //    else
+        //    {
+        //        var kepDB = new SQLiteConnection("KEP.db");
+        //        kepDB.CreateTable<usersDB>();
+        //        kepDB.CreateTable<reqDB>();
+        //        kepDB.Close();
+        //    }
+        //}
 
         private void typeManu_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -77,6 +77,10 @@ namespace myKEP
             if (emptyFields)
             {
                 MessageBox.Show("Παρακαλώ συμπληρώστε όλα τα πεδία");
+            } else
+            {
+                usersDB User = new usersDB(nameField.Text, surnameField.Text, emailField.Text, phoneField.Text, dobPicker.Text, addressField.Text, ATField.Text);
+                KEPdb.insertUser(User);
             }
            
             

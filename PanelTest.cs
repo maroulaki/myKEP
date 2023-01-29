@@ -8,8 +8,8 @@ namespace myKEP
         public PanelTest()
         {
             InitializeComponent();
-            KEPdb = new DBHandler();
-            //KEPdb.initDB();
+            //KEPdb = new DBHandler();
+            //KEPdb.test();
         }
         private Form currentForm;
         private DBHandler KEPdb;
