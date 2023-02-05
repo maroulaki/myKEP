@@ -32,23 +32,29 @@
             this.delText = new System.Windows.Forms.Label();
             this.listText = new System.Windows.Forms.Label();
             this.editText = new System.Windows.Forms.Label();
-            this.edit = new System.Windows.Forms.PictureBox();
-            this.list = new System.Windows.Forms.PictureBox();
-            this.delete = new System.Windows.Forms.PictureBox();
-            this.add = new System.Windows.Forms.PictureBox();
+            this.editReqBtn = new System.Windows.Forms.PictureBox();
+            this.listReqBtn = new System.Windows.Forms.PictureBox();
+            this.delReqBtn = new System.Windows.Forms.PictureBox();
+            this.newReqBtn = new System.Windows.Forms.PictureBox();
             this.addText = new System.Windows.Forms.Label();
             this.welcome = new System.Windows.Forms.Label();
             this.avatarPB = new System.Windows.Forms.PictureBox();
             this.Head = new System.Windows.Forms.Panel();
             this.Screen = new System.Windows.Forms.Panel();
             this.Sidebar = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.newUserBtn = new System.Windows.Forms.PictureBox();
+            this.editUserBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.editReqBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listReqBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delReqBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newReqBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPB)).BeginInit();
             this.Head.SuspendLayout();
             this.Sidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.newUserBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editUserBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // delText
@@ -56,125 +62,126 @@
             this.delText.AutoSize = true;
             this.delText.BackColor = System.Drawing.Color.Transparent;
             this.delText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.delText.Location = new System.Drawing.Point(78, 282);
+            this.delText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.delText.Location = new System.Drawing.Point(68, 369);
             this.delText.Name = "delText";
-            this.delText.Size = new System.Drawing.Size(199, 60);
+            this.delText.Size = new System.Drawing.Size(171, 50);
             this.delText.TabIndex = 32;
             this.delText.Text = "Διαγραφή αίτησης\r\n\r\n";
-            
             // 
             // listText
             // 
             this.listText.AutoSize = true;
             this.listText.BackColor = System.Drawing.Color.Transparent;
             this.listText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.listText.Location = new System.Drawing.Point(78, 199);
+            this.listText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.listText.Location = new System.Drawing.Point(68, 303);
             this.listText.Name = "listText";
-            this.listText.Size = new System.Drawing.Size(207, 60);
+            this.listText.Size = new System.Drawing.Size(175, 50);
             this.listText.TabIndex = 31;
             this.listText.Text = "Προβολή αιτήσεων\r\n\r\n";
+            
             // 
             // editText
             // 
             this.editText.AutoSize = true;
             this.editText.BackColor = System.Drawing.Color.Transparent;
             this.editText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.editText.Location = new System.Drawing.Point(78, 123);
+            this.editText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.editText.Location = new System.Drawing.Point(68, 103);
             this.editText.Name = "editText";
-            this.editText.Size = new System.Drawing.Size(225, 60);
+            this.editText.Size = new System.Drawing.Size(110, 25);
             this.editText.TabIndex = 30;
-            this.editText.Text = "Επεξεργασία αίτησης\r\n\r\n";
+            this.editText.Text = "Νέα αίτηση";
             // 
-            // edit
+            // editReqBtn
             // 
-            this.edit.BackColor = System.Drawing.Color.Transparent;
-            this.edit.BackgroundImage = global::myKEP.Properties.Resources.edit;
-            this.edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edit.Location = new System.Drawing.Point(12, 106);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(60, 60);
-            this.edit.TabIndex = 29;
-            this.edit.TabStop = false;
+            this.editReqBtn.BackColor = System.Drawing.Color.Transparent;
+            this.editReqBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editReqBtn.BackgroundImage")));
+            this.editReqBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.editReqBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editReqBtn.Location = new System.Drawing.Point(12, 157);
+            this.editReqBtn.Name = "editReqBtn";
+            this.editReqBtn.Size = new System.Drawing.Size(50, 50);
+            this.editReqBtn.TabIndex = 29;
+            this.editReqBtn.TabStop = false;
+            this.editReqBtn.Click += new System.EventHandler(this.editReqBtn_Click);
             // 
-            // list
+            // listReqBtn
             // 
-            this.list.BackColor = System.Drawing.Color.Transparent;
-            this.list.BackgroundImage = global::myKEP.Properties.Resources.list;
-            this.list.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.list.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.list.Location = new System.Drawing.Point(12, 186);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(60, 60);
-            this.list.TabIndex = 28;
-            this.list.TabStop = false;
-            this.list.Click += new System.EventHandler(this.list_Click);
+            this.listReqBtn.BackColor = System.Drawing.Color.Transparent;
+            this.listReqBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listReqBtn.BackgroundImage")));
+            this.listReqBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.listReqBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listReqBtn.Location = new System.Drawing.Point(12, 289);
+            this.listReqBtn.Name = "listReqBtn";
+            this.listReqBtn.Size = new System.Drawing.Size(50, 50);
+            this.listReqBtn.TabIndex = 28;
+            this.listReqBtn.TabStop = false;
+            this.listReqBtn.Click += new System.EventHandler(this.listReqBtn_Click);
             // 
-            // delete
+            // delReqBtn
             // 
-            this.delete.BackColor = System.Drawing.Color.Transparent;
-            this.delete.BackgroundImage = global::myKEP.Properties.Resources.trash;
-            this.delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delete.Location = new System.Drawing.Point(12, 266);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(60, 60);
-            this.delete.TabIndex = 27;
-            this.delete.TabStop = false;
+            this.delReqBtn.BackColor = System.Drawing.Color.Transparent;
+            this.delReqBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delReqBtn.BackgroundImage")));
+            this.delReqBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.delReqBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delReqBtn.Location = new System.Drawing.Point(12, 355);
+            this.delReqBtn.Name = "delReqBtn";
+            this.delReqBtn.Size = new System.Drawing.Size(50, 50);
+            this.delReqBtn.TabIndex = 27;
+            this.delReqBtn.TabStop = false;
+            this.delReqBtn.Click += new System.EventHandler(this.delReqBtn_Click);
             // 
-            // add
+            // newReqBtn
             // 
-            this.add.BackColor = System.Drawing.Color.Transparent;
-            this.add.BackgroundImage = global::myKEP.Properties.Resources.add;
-            this.add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add.Location = new System.Drawing.Point(12, 28);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(60, 60);
-            this.add.TabIndex = 26;
-            this.add.TabStop = false;
-            this.add.Click += new System.EventHandler(this.add_Click);
+            this.newReqBtn.BackColor = System.Drawing.Color.Transparent;
+            this.newReqBtn.BackgroundImage = global::myKEP.Properties.Resources.new_req;
+            this.newReqBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.newReqBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newReqBtn.Location = new System.Drawing.Point(12, 91);
+            this.newReqBtn.Name = "newReqBtn";
+            this.newReqBtn.Size = new System.Drawing.Size(50, 50);
+            this.newReqBtn.TabIndex = 26;
+            this.newReqBtn.TabStop = false;
+            this.newReqBtn.Click += new System.EventHandler(this.newReqBtn_Click);
             // 
             // addText
             // 
             this.addText.AutoSize = true;
             this.addText.BackColor = System.Drawing.Color.Transparent;
             this.addText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addText.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.addText.Location = new System.Drawing.Point(78, 43);
+            this.addText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.addText.Location = new System.Drawing.Point(68, 34);
             this.addText.Name = "addText";
-            this.addText.Size = new System.Drawing.Size(205, 30);
+            this.addText.Size = new System.Drawing.Size(170, 25);
             this.addText.TabIndex = 25;
-            this.addText.Text = "Προσθήκη αίτησης";
+            this.addText.Text = "Προσθήκη χρήστη";
+            
             // 
             // welcome
             // 
             this.welcome.AutoSize = true;
             this.welcome.BackColor = System.Drawing.Color.Transparent;
             this.welcome.Font = new System.Drawing.Font("Segoe UI Semibold", 21.91304F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.welcome.Location = new System.Drawing.Point(107, 77);
+            this.welcome.Location = new System.Drawing.Point(137, 68);
             this.welcome.Name = "welcome";
-            this.welcome.Size = new System.Drawing.Size(266, 47);
+            this.welcome.Size = new System.Drawing.Size(453, 47);
             this.welcome.TabIndex = 24;
-            this.welcome.Text = "Καλώς ορίσατε";
+            this.welcome.Text = "Καλώς ορίσατε στο myKEP";
             this.welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.welcome.Click += new System.EventHandler(this.welcome_Click);
             // 
             // avatarPB
             // 
             this.avatarPB.BackColor = System.Drawing.Color.Transparent;
-            this.avatarPB.BackgroundImage = global::myKEP.Properties.Resources.icons8_contact_info_100;
+            this.avatarPB.BackgroundImage = global::myKEP.Properties.Resources.icons8_info_100_2_;
             this.avatarPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.avatarPB.Location = new System.Drawing.Point(-1, -1);
+            this.avatarPB.Location = new System.Drawing.Point(0, 0);
             this.avatarPB.Margin = new System.Windows.Forms.Padding(0);
             this.avatarPB.Name = "avatarPB";
-            this.avatarPB.Size = new System.Drawing.Size(130, 128);
+            this.avatarPB.Size = new System.Drawing.Size(148, 147);
             this.avatarPB.TabIndex = 23;
             this.avatarPB.TabStop = false;
-            this.avatarPB.Click += new System.EventHandler(this.avatarPB_Click);
             // 
             // Head
             // 
@@ -187,35 +194,87 @@
             this.Head.Name = "Head";
             this.Head.Size = new System.Drawing.Size(1182, 128);
             this.Head.TabIndex = 1;
-            this.Head.Paint += new System.Windows.Forms.PaintEventHandler(this.Head_Paint);
             // 
             // Screen
             // 
             this.Screen.BackColor = System.Drawing.Color.Transparent;
             this.Screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Screen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Screen.Location = new System.Drawing.Point(300, 128);
+            this.Screen.Location = new System.Drawing.Point(282, 128);
             this.Screen.Name = "Screen";
-            this.Screen.Size = new System.Drawing.Size(882, 627);
+            this.Screen.Size = new System.Drawing.Size(900, 627);
             this.Screen.TabIndex = 0;
-            this.Screen.Paint += new System.Windows.Forms.PaintEventHandler(this.Screen_Paint);
             // 
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.Color.AliceBlue;
+            this.Sidebar.Controls.Add(this.label2);
+            this.Sidebar.Controls.Add(this.label1);
+            this.Sidebar.Controls.Add(this.newUserBtn);
+            this.Sidebar.Controls.Add(this.editUserBtn);
             this.Sidebar.Controls.Add(this.editText);
             this.Sidebar.Controls.Add(this.addText);
             this.Sidebar.Controls.Add(this.delText);
-            this.Sidebar.Controls.Add(this.add);
+            this.Sidebar.Controls.Add(this.newReqBtn);
             this.Sidebar.Controls.Add(this.listText);
-            this.Sidebar.Controls.Add(this.delete);
-            this.Sidebar.Controls.Add(this.list);
-            this.Sidebar.Controls.Add(this.edit);
+            this.Sidebar.Controls.Add(this.delReqBtn);
+            this.Sidebar.Controls.Add(this.listReqBtn);
+            this.Sidebar.Controls.Add(this.editReqBtn);
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.Sidebar.Location = new System.Drawing.Point(0, 128);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(302, 627);
+            this.Sidebar.Size = new System.Drawing.Size(286, 627);
             this.Sidebar.TabIndex = 34;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.Location = new System.Drawing.Point(68, 169);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 25);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Επεξεργασία αίτησης";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(68, 236);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 25);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Επεξεργασία στοιχείων";
+            // 
+            // newUserBtn
+            // 
+            this.newUserBtn.BackColor = System.Drawing.Color.Transparent;
+            this.newUserBtn.BackgroundImage = global::myKEP.Properties.Resources.new_user;
+            this.newUserBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.newUserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newUserBtn.Location = new System.Drawing.Point(12, 22);
+            this.newUserBtn.Name = "newUserBtn";
+            this.newUserBtn.Size = new System.Drawing.Size(50, 50);
+            this.newUserBtn.TabIndex = 34;
+            this.newUserBtn.TabStop = false;
+            this.newUserBtn.Click += new System.EventHandler(this.newUserBtn_Click);
+            // 
+            // editUserBtn
+            // 
+            this.editUserBtn.BackColor = System.Drawing.Color.Transparent;
+            this.editUserBtn.BackgroundImage = global::myKEP.Properties.Resources.change_info;
+            this.editUserBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.editUserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editUserBtn.Location = new System.Drawing.Point(12, 223);
+            this.editUserBtn.Name = "editUserBtn";
+            this.editUserBtn.Size = new System.Drawing.Size(50, 50);
+            this.editUserBtn.TabIndex = 33;
+            this.editUserBtn.TabStop = false;
+            this.editUserBtn.Click += new System.EventHandler(this.editUserBtn_Click);
             // 
             // PanelTest
             // 
@@ -230,17 +289,20 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PanelTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panel Test";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editReqBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listReqBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delReqBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newReqBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPB)).EndInit();
             this.Head.ResumeLayout(false);
             this.Head.PerformLayout();
             this.Sidebar.ResumeLayout(false);
             this.Sidebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.newUserBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editUserBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,15 +312,19 @@
         public System.Windows.Forms.Label delText;
         public System.Windows.Forms.Label listText;
         public System.Windows.Forms.Label editText;
-        public System.Windows.Forms.PictureBox edit;
-        public System.Windows.Forms.PictureBox list;
-        public System.Windows.Forms.PictureBox delete;
-        public System.Windows.Forms.PictureBox add;
+        public System.Windows.Forms.PictureBox editReqBtn;
+        public System.Windows.Forms.PictureBox listReqBtn;
+        public System.Windows.Forms.PictureBox delReqBtn;
+        public System.Windows.Forms.PictureBox newReqBtn;
         public System.Windows.Forms.Label addText;
         public System.Windows.Forms.Label welcome;
         public System.Windows.Forms.PictureBox avatarPB;
         private System.Windows.Forms.Panel Head;
         private System.Windows.Forms.Panel Screen;
         private System.Windows.Forms.Panel Sidebar;
+        public System.Windows.Forms.PictureBox newUserBtn;
+        public System.Windows.Forms.PictureBox editUserBtn;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
     }
 }

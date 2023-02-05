@@ -1,94 +1,37 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
-using SQLite;
 
 namespace myKEP
 {
     public partial class NewReq : Form
     {
-        public NewReq()
+        DBHandler KEPdb;
+        User user;
+        public NewReq(string AT)
         {
             InitializeComponent();
             KEPdb = new DBHandler();
-        }
-        private DBHandler KEPdb;
-       
-
-        private void myKEP_Load(object sender, EventArgs e)
-        {
-            
+            user = KEPdb.FetchUser(AT);
         }
 
-        //private void initDB()
-        //{
-        //    if (System.IO.File.Exists("KEP.db"))
-        //    {
-
-        //    } 
-        //    else
-        //    {
-        //        var kepDB = new SQLiteConnection("KEP.db");
-        //        kepDB.CreateTable<usersDB>();
-        //        kepDB.CreateTable<reqDB>();
-        //        kepDB.Close();
-        //    }
-        //}
-
-        private void typeManu_SelectedIndexChanged(object sender, EventArgs e)
+        private void newReqButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void reqEnterButton_Click(object sender, EventArgs e)
-        {
-            bool emptyFields = false;
-
-            if (string.IsNullOrEmpty(nameField.Text))
+            if (string.IsNullOrEmpty(typeField.Text))
             {
-                emptyFields = true;
-            } else if (string.IsNullOrEmpty(surnameField.Text))
-            {
-                emptyFields = true;
-            } else if (string.IsNullOrEmpty (phoneField.Text))
-            {
-                emptyFields = true;
-            } else if (string.IsNullOrEmpty(emailField.Text))
-            {
-                emptyFields = true;
-            } else if (string.IsNullOrEmpty(addressField.Text))
-            {
-                emptyFields = true;
-            } else if (string.IsNullOrEmpty(typeField.Text))
-            {
-                emptyFields = true;
-            } else if (dobPicker.Value.Date >= DateTime.Today)
-            {
-                emptyFields = true;
-            } else if (string.IsNullOrEmpty(ATField.Text))
-            {
-                emptyFields = true;
+                MessageBox.Show("Παρακαλώ συμπληρώστε σωστά όλα τα πεδία", "Message");
             }
-
-            if (emptyFields)
+            else
             {
-                MessageBox.Show("Παρακαλώ συμπληρώστε όλα τα πεδία");
-            } else
-            {
-                usersDB User = new usersDB(nameField.Text, surnameField.Text, emailField.Text, phoneField.Text, dobPicker.Text, addressField.Text, ATField.Text);
-                KEPdb.insertUser(User);
+                Request request = new Request(typeField.Text, DateTime.Now.ToString(), user.AT, KEPdb.RequestIDGen());
+                KEPdb.InsertRequest(user, request);
             }
-           
-            
-        }
-
-        private void ATLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
