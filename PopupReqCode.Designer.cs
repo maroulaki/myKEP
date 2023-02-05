@@ -37,6 +37,7 @@
             // desc
             // 
             this.desc.AutoSize = true;
+            this.desc.BackColor = System.Drawing.Color.Transparent;
             this.desc.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.desc.Location = new System.Drawing.Point(31, 9);
             this.desc.Name = "desc";
@@ -70,16 +71,18 @@
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = false;
             // 
-            // Popup
+            // PopupReqCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(382, 155);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.Response);
             this.Controls.Add(this.desc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Popup";
+            this.Name = "PopupReqCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message";
             this.Load += new System.EventHandler(this.Popup_Load);

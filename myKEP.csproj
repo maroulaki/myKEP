@@ -260,6 +260,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>KEP1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icons8-info-100%281%29.ico" />
+    <None Include="Resources\icons8-edit-file-100.png" />
+    <None Include="Resources\icons8-add-user-male-100.png" />
+    <None Include="Resources\icons8-trash-100.png" />
+    <None Include="Resources\icons8-single-page-mode-100.png" />
+    <None Include="Resources\icons8-edit-user-100.png" />
+    <None Include="Resources\icons8-add-file-100.png" />
     <None Include="Resources\icons8-contact-info-100.png" />
     <None Include="Resources\icons8-about-100.png" />
     <None Include="Resources\icons8-info-100.png" />

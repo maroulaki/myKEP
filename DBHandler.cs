@@ -32,7 +32,7 @@ namespace myKEP
             {
                 reqID.Append((char)rand.Next(65,90));
             }
-            //And 3 random numbers
+            //And 3 random digits
             for (int i = 0; i < 3; i++)
             {
                 reqID.Append(rand.Next(0,10));
@@ -104,9 +104,9 @@ namespace myKEP
         public Request FetchRequest(string Code)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
-            string qSearchReqCode = "SELECT Type,Date,AT,reqID FROM Requests WHERE reqID = @Parameter";
+            string qGetReqValues = "SELECT Type,Date,AT,reqID FROM Requests WHERE reqID = @Parameter";
             kepDB.Open();
-            SqlCommand command = new SqlCommand(qSearchReqCode, kepDB);
+            SqlCommand command = new SqlCommand(qGetReqValues, kepDB);
             command.Parameters.AddWithValue("@Parameter", Code);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
@@ -124,9 +124,9 @@ namespace myKEP
         public User FetchUser(string AT)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
-            string qSearchReqCode = "SELECT Name, Surname, Phone, Email, DateOfBirth, Address, AT FROM Users WHERE AT = @Parameter";
+            string qGetUserValues = "SELECT Name, Surname, Phone, Email, DateOfBirth, Address, AT FROM Users WHERE AT = @Parameter";
             kepDB.Open();
-            SqlCommand command = new SqlCommand(qSearchReqCode, kepDB);
+            SqlCommand command = new SqlCommand(qGetUserValues, kepDB);
             command.Parameters.AddWithValue("@Parameter", AT);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
@@ -161,9 +161,9 @@ namespace myKEP
         public bool UserExists(string AT)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
-            string qSearchReqCode = "SELECT Id FROM Users WHERE AT = @Parameter";
+            string qSearchByAT = "SELECT Id FROM Users WHERE AT = @Parameter";
             kepDB.Open();
-            SqlCommand command = new SqlCommand(qSearchReqCode, kepDB);
+            SqlCommand command = new SqlCommand(qSearchByAT, kepDB);
             command.Parameters.AddWithValue("@Parameter", AT);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
@@ -222,7 +222,22 @@ namespace myKEP
                 MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας" + user.AT + "καταχωρίστηκε");
             }
         }
+
+        public void DeleteUser(string AT)
+        {
+            SqlConnection kepDB = new SqlConnection(ConnString);
+            kepDB.Open();
+            string qDelUser = "DELETE FROM Users WHERE AT=@Parameter";
+            SqlCommand command = new SqlCommand(qDelUser, kepDB);
+            command.Parameters.AddWithValue("@Parameter", AT);
+            command.ExecuteNonQuery();
+            string qDelReqs = "DELETE FROM Requests WHERE AT=@Parameter";
+            command.CommandText = qDelReqs;
+            command.ExecuteNonQuery();
+            MessageBox.Show("Ο χρήστης με Αριθμό Ταυτότητας " + AT + " έχει διαγραφεί", "Message");
+        }
         
+
     }
 
 }

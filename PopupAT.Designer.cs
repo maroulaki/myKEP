@@ -43,7 +43,7 @@
             this.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OK.Font = new System.Drawing.Font("Segoe UI", 10.01739F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.OK.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.OK.Location = new System.Drawing.Point(70, 109);
+            this.OK.Location = new System.Drawing.Point(85, 104);
             this.OK.Margin = new System.Windows.Forms.Padding(0);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(217, 31);
@@ -54,7 +54,7 @@
             // Response
             // 
             this.Response.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.Response.Location = new System.Drawing.Point(70, 61);
+            this.Response.Location = new System.Drawing.Point(85, 57);
             this.Response.Name = "Response";
             this.Response.Size = new System.Drawing.Size(217, 33);
             this.Response.TabIndex = 58;
@@ -62,8 +62,9 @@
             // desc
             // 
             this.desc.AutoSize = true;
+            this.desc.BackColor = System.Drawing.Color.Transparent;
             this.desc.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.desc.Location = new System.Drawing.Point(22, 14);
+            this.desc.Location = new System.Drawing.Point(22, 9);
             this.desc.Name = "desc";
             this.desc.Size = new System.Drawing.Size(339, 25);
             this.desc.TabIndex = 57;
@@ -73,6 +74,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(382, 155);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.Response);

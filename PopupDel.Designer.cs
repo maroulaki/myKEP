@@ -29,10 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopupDel));
-            this.OK = new System.Windows.Forms.Button();
-            this.Response = new System.Windows.Forms.TextBox();
             this.desc = new System.Windows.Forms.Label();
+            this.OK = new System.Windows.Forms.Button();
+            this.delResponse = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
+            // 
+            // desc
+            // 
+            this.desc.AutoSize = true;
+            this.desc.BackColor = System.Drawing.Color.Transparent;
+            this.desc.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.desc.Location = new System.Drawing.Point(104, 9);
+            this.desc.Name = "desc";
+            this.desc.Size = new System.Drawing.Size(171, 25);
+            this.desc.TabIndex = 60;
+            this.desc.Text = "Επιλέξτε διαγραφή\r\n";
             // 
             // OK
             // 
@@ -43,39 +54,35 @@
             this.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OK.Font = new System.Drawing.Font("Segoe UI", 10.01739F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.OK.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.OK.Location = new System.Drawing.Point(70, 109);
+            this.OK.Location = new System.Drawing.Point(83, 115);
             this.OK.Margin = new System.Windows.Forms.Padding(0);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(217, 31);
-            this.OK.TabIndex = 62;
+            this.OK.TabIndex = 61;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = false;
             // 
-            // Response
+            // delResponse
             // 
-            this.Response.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.Response.Location = new System.Drawing.Point(70, 61);
-            this.Response.Name = "Response";
-            this.Response.Size = new System.Drawing.Size(217, 33);
-            this.Response.TabIndex = 61;
-            // 
-            // desc
-            // 
-            this.desc.AutoSize = true;
-            this.desc.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.desc.Location = new System.Drawing.Point(22, 14);
-            this.desc.Name = "desc";
-            this.desc.Size = new System.Drawing.Size(339, 25);
-            this.desc.TabIndex = 60;
-            this.desc.Text = "Συμπληρώστε τον Αριθμό Ταυτότητας";
+            this.delResponse.Font = new System.Drawing.Font("Segoe UI", 11.26957F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.delResponse.FormattingEnabled = true;
+            this.delResponse.Items.AddRange(new object[] {
+            "Διαγραφή αίτησης",
+            "Διαγραφή χρήστη"});
+            this.delResponse.Location = new System.Drawing.Point(83, 64);
+            this.delResponse.Name = "delResponse";
+            this.delResponse.Size = new System.Drawing.Size(217, 33);
+            this.delResponse.TabIndex = 62;
             // 
             // PopupDel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(382, 155);
+            this.Controls.Add(this.delResponse);
             this.Controls.Add(this.OK);
-            this.Controls.Add(this.Response);
             this.Controls.Add(this.desc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PopupDel";
@@ -87,9 +94,8 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.Button OK;
-        public System.Windows.Forms.TextBox Response;
         private System.Windows.Forms.Label desc;
+        public System.Windows.Forms.Button OK;
+        public System.Windows.Forms.ComboBox delResponse;
     }
 }

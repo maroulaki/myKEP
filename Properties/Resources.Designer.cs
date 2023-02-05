@@ -63,56 +63,6 @@ namespace myKEP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add {
-            get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap avatar {
-            get {
-                object obj = ResourceManager.GetObject("avatar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap change_info {
-            get {
-                object obj = ResourceManager.GetObject("change_info", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap db_png {
-            get {
-                object obj = ResourceManager.GetObject("db.png", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap edit {
-            get {
-                object obj = ResourceManager.GetObject("edit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
@@ -123,9 +73,9 @@ namespace myKEP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_contact_info_100 {
+        internal static System.Drawing.Bitmap icons8_add_file_100 {
             get {
-                object obj = ResourceManager.GetObject("icons8_contact_info_100", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_add_file_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +83,9 @@ namespace myKEP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_go_back_80 {
+        internal static System.Drawing.Bitmap icons8_add_user_male_100 {
             get {
-                object obj = ResourceManager.GetObject("icons8-go-back-80", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_add_user_male_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +93,9 @@ namespace myKEP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_info_100 {
+        internal static System.Drawing.Bitmap icons8_edit_file_100 {
             get {
-                object obj = ResourceManager.GetObject("icons8_info_100", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_edit_file_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,10 +103,20 @@ namespace myKEP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_info_100_1_ {
+        internal static System.Drawing.Bitmap icons8_edit_user_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_edit_user_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_info_100_1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8_info_100_1_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -166,6 +126,26 @@ namespace myKEP.Properties {
         internal static System.Drawing.Bitmap icons8_info_100_2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8_info_100_2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_single_page_mode_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_single_page_mode_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_trash_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_trash_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,46 +166,6 @@ namespace myKEP.Properties {
         internal static System.Drawing.Bitmap kepbg {
             get {
                 object obj = ResourceManager.GetObject("kepbg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap list {
-            get {
-                object obj = ResourceManager.GetObject("list", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap new_req {
-            get {
-                object obj = ResourceManager.GetObject("new_req", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap new_user {
-            get {
-                object obj = ResourceManager.GetObject("new_user", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap trash {
-            get {
-                object obj = ResourceManager.GetObject("trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

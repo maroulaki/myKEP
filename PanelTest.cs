@@ -78,8 +78,30 @@ namespace myKEP
 
         private void delReqBtn_Click(object sender, EventArgs e)
         {
+            PopupDel popup = new PopupDel();
 
+            if (popup.ShowDialog(this) == DialogResult.OK)
+            {
+                if (popup.delResponse.Text == "Διαγραφή χρήστη")
+                {
+                    PopupAT popAT = new PopupAT();
+                    if (popAT.ShowDialog(this) == DialogResult.OK)
+                    {
+                        KEPdb.DeleteUser(popAT.Response.Text);
+                    }
+                } else if (popup.delResponse.Text == "Διαγραφή αίτησης")
+                {
+                    PopupReqCode popCode = new PopupReqCode();
+                    if (popCode.ShowDialog(this) == DialogResult.OK)
+                    {
+
+                    }
+                }
+                    
+            }
+            popup.Dispose();
         }
+        
 
         private void newUserBtn_Click(object sender, EventArgs e)
         {
@@ -104,6 +126,16 @@ namespace myKEP
                 }
                 popup.Dispose();
             }
+        }
+
+        private void listText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void welcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
