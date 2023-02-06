@@ -21,7 +21,6 @@ namespace myKEP
         }
 
         private DBHandler KEPdb;
-        private User user;
         private Request request;
 
         private void reqEditButton_Click(object sender, EventArgs e)

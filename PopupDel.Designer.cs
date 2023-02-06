@@ -39,11 +39,12 @@
             this.desc.AutoSize = true;
             this.desc.BackColor = System.Drawing.Color.Transparent;
             this.desc.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.desc.Location = new System.Drawing.Point(104, 9);
+            this.desc.Location = new System.Drawing.Point(78, 7);
+            this.desc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.desc.Name = "desc";
-            this.desc.Size = new System.Drawing.Size(171, 25);
+            this.desc.Size = new System.Drawing.Size(133, 21);
             this.desc.TabIndex = 60;
-            this.desc.Text = "Επιλέξτε διαγραφή\r\n";
+            this.desc.Text = "Επιλέξτε ενέργεια";
             // 
             // OK
             // 
@@ -54,10 +55,10 @@
             this.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OK.Font = new System.Drawing.Font("Segoe UI", 10.01739F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.OK.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.OK.Location = new System.Drawing.Point(83, 115);
+            this.OK.Location = new System.Drawing.Point(62, 93);
             this.OK.Margin = new System.Windows.Forms.Padding(0);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(217, 31);
+            this.OK.Size = new System.Drawing.Size(163, 25);
             this.OK.TabIndex = 61;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = false;
@@ -69,22 +70,24 @@
             this.delResponse.Items.AddRange(new object[] {
             "Διαγραφή αίτησης",
             "Διαγραφή χρήστη"});
-            this.delResponse.Location = new System.Drawing.Point(83, 64);
+            this.delResponse.Location = new System.Drawing.Point(62, 52);
+            this.delResponse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.delResponse.Name = "delResponse";
-            this.delResponse.Size = new System.Drawing.Size(217, 33);
+            this.delResponse.Size = new System.Drawing.Size(164, 28);
             this.delResponse.TabIndex = 62;
             // 
             // PopupDel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::myKEP.Properties.Resources.kepbg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(382, 155);
+            this.ClientSize = new System.Drawing.Size(286, 126);
             this.Controls.Add(this.delResponse);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.desc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PopupDel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message";

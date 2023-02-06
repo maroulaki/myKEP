@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelTest));
             this.delText = new System.Windows.Forms.Label();
             this.listText = new System.Windows.Forms.Label();
-            this.editText = new System.Windows.Forms.Label();
+            this.newReqLabel = new System.Windows.Forms.Label();
             this.editReqBtn = new System.Windows.Forms.PictureBox();
             this.listReqBtn = new System.Windows.Forms.PictureBox();
             this.delReqBtn = new System.Windows.Forms.PictureBox();
@@ -42,8 +42,8 @@
             this.Head = new System.Windows.Forms.Panel();
             this.Screen = new System.Windows.Forms.Panel();
             this.Sidebar = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.editReqLabel = new System.Windows.Forms.Label();
+            this.editUsrLabel = new System.Windows.Forms.Label();
             this.newUserBtn = new System.Windows.Forms.PictureBox();
             this.editUserBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.editReqBtn)).BeginInit();
@@ -65,9 +65,10 @@
             this.delText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.delText.Location = new System.Drawing.Point(80, 463);
             this.delText.Name = "delText";
-            this.delText.Size = new System.Drawing.Size(98, 25);
+            this.delText.Size = new System.Drawing.Size(81, 21);
             this.delText.TabIndex = 32;
             this.delText.Text = "Διαγραφή";
+            this.delText.Click += new System.EventHandler(this.delText_Click);
             // 
             // listText
             // 
@@ -77,22 +78,23 @@
             this.listText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.listText.Location = new System.Drawing.Point(80, 378);
             this.listText.Name = "listText";
-            this.listText.Size = new System.Drawing.Size(89, 25);
+            this.listText.Size = new System.Drawing.Size(74, 21);
             this.listText.TabIndex = 31;
             this.listText.Text = "Προβολή";
             this.listText.Click += new System.EventHandler(this.listText_Click);
             // 
-            // editText
+            // newReqLabel
             // 
-            this.editText.AutoSize = true;
-            this.editText.BackColor = System.Drawing.Color.Transparent;
-            this.editText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.editText.Location = new System.Drawing.Point(80, 208);
-            this.editText.Name = "editText";
-            this.editText.Size = new System.Drawing.Size(110, 25);
-            this.editText.TabIndex = 30;
-            this.editText.Text = "Νέα αίτηση";
+            this.newReqLabel.AutoSize = true;
+            this.newReqLabel.BackColor = System.Drawing.Color.Transparent;
+            this.newReqLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newReqLabel.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.newReqLabel.Location = new System.Drawing.Point(80, 208);
+            this.newReqLabel.Name = "newReqLabel";
+            this.newReqLabel.Size = new System.Drawing.Size(92, 21);
+            this.newReqLabel.TabIndex = 30;
+            this.newReqLabel.Text = "Νέα αίτηση";
+            this.newReqLabel.Click += new System.EventHandler(this.newReqLabel_Click);
             // 
             // editReqBtn
             // 
@@ -154,9 +156,10 @@
             this.addText.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.addText.Location = new System.Drawing.Point(80, 39);
             this.addText.Name = "addText";
-            this.addText.Size = new System.Drawing.Size(170, 25);
+            this.addText.Size = new System.Drawing.Size(140, 21);
             this.addText.TabIndex = 25;
             this.addText.Text = "Προσθήκη χρήστη";
+            this.addText.Click += new System.EventHandler(this.addText_Click);
             // 
             // welcome
             // 
@@ -165,7 +168,7 @@
             this.welcome.Font = new System.Drawing.Font("Segoe UI Semibold", 21.91304F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.welcome.Location = new System.Drawing.Point(149, 66);
             this.welcome.Name = "welcome";
-            this.welcome.Size = new System.Drawing.Size(453, 47);
+            this.welcome.Size = new System.Drawing.Size(389, 41);
             this.welcome.TabIndex = 24;
             this.welcome.Text = "Καλώς ορίσατε στο myKEP";
             this.welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,9 +211,9 @@
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Sidebar.Controls.Add(this.editText);
-            this.Sidebar.Controls.Add(this.label2);
-            this.Sidebar.Controls.Add(this.label1);
+            this.Sidebar.Controls.Add(this.newReqLabel);
+            this.Sidebar.Controls.Add(this.editReqLabel);
+            this.Sidebar.Controls.Add(this.editUsrLabel);
             this.Sidebar.Controls.Add(this.newUserBtn);
             this.Sidebar.Controls.Add(this.editUserBtn);
             this.Sidebar.Controls.Add(this.addText);
@@ -226,29 +229,31 @@
             this.Sidebar.Size = new System.Drawing.Size(286, 627);
             this.Sidebar.TabIndex = 34;
             // 
-            // label2
+            // editReqLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label2.Location = new System.Drawing.Point(80, 294);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 25);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Επεξεργασία αίτησης";
+            this.editReqLabel.AutoSize = true;
+            this.editReqLabel.BackColor = System.Drawing.Color.Transparent;
+            this.editReqLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editReqLabel.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.editReqLabel.Location = new System.Drawing.Point(80, 294);
+            this.editReqLabel.Name = "editReqLabel";
+            this.editReqLabel.Size = new System.Drawing.Size(159, 21);
+            this.editReqLabel.TabIndex = 36;
+            this.editReqLabel.Text = "Επεξεργασία αίτησης";
+            this.editReqLabel.Click += new System.EventHandler(this.editReqLabel_Click);
             // 
-            // label1
+            // editUsrLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(80, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 25);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Επεξεργασία χρήστη";
+            this.editUsrLabel.AutoSize = true;
+            this.editUsrLabel.BackColor = System.Drawing.Color.Transparent;
+            this.editUsrLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editUsrLabel.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.editUsrLabel.Location = new System.Drawing.Point(80, 122);
+            this.editUsrLabel.Name = "editUsrLabel";
+            this.editUsrLabel.Size = new System.Drawing.Size(156, 21);
+            this.editUsrLabel.TabIndex = 35;
+            this.editUsrLabel.Text = "Επεξεργασία χρήστη";
+            this.editUsrLabel.Click += new System.EventHandler(this.editUsrLabel_Click);
             // 
             // newUserBtn
             // 
@@ -311,7 +316,7 @@
 
         public System.Windows.Forms.Label delText;
         public System.Windows.Forms.Label listText;
-        public System.Windows.Forms.Label editText;
+        public System.Windows.Forms.Label newReqLabel;
         public System.Windows.Forms.PictureBox editReqBtn;
         public System.Windows.Forms.PictureBox listReqBtn;
         public System.Windows.Forms.PictureBox delReqBtn;
@@ -324,7 +329,7 @@
         private System.Windows.Forms.Panel Sidebar;
         public System.Windows.Forms.PictureBox newUserBtn;
         public System.Windows.Forms.PictureBox editUserBtn;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label editReqLabel;
+        public System.Windows.Forms.Label editUsrLabel;
     }
 }

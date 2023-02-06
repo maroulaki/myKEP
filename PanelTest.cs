@@ -94,7 +94,7 @@ namespace myKEP
                     PopupReqCode popCode = new PopupReqCode();
                     if (popCode.ShowDialog(this) == DialogResult.OK)
                     {
-
+                        KEPdb.DeleteRequest(popCode.Response.Text);
                     }
                 }
                     
@@ -136,6 +136,31 @@ namespace myKEP
         private void welcome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addText_Click(object sender, EventArgs e)
+        {
+            newUserBtn_Click(sender, e);
+        }
+
+        private void editUsrLabel_Click(object sender, EventArgs e)
+        {
+            editUserBtn_Click(sender, e);
+        }
+
+        private void newReqLabel_Click(object sender, EventArgs e)
+        {
+            newReqBtn_Click(sender, e);
+        }
+
+        private void editReqLabel_Click(object sender, EventArgs e)
+        {
+            editReqBtn_Click(sender, e);
+        }
+
+        private void delText_Click(object sender, EventArgs e)
+        {
+            delReqBtn_Click(sender, e);
         }
     }
 }

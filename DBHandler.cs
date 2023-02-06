@@ -236,8 +236,55 @@ namespace myKEP
             command.ExecuteNonQuery();
             MessageBox.Show("Ο χρήστης με Αριθμό Ταυτότητας " + AT + " έχει διαγραφεί", "Message");
         }
-        
+
+        public void DeleteRequest(string reqID)
+        {
+            SqlConnection kepDB = new SqlConnection(ConnString);
+            kepDB.Open();
+            string qGetReqAT = "SELECT AT FROM Requests WHERE reqID = @Parameter1"; //Get the AT of the request's User, to reduce their reqNo
+            SqlCommand command = new SqlCommand(qGetReqAT, kepDB);
+            command.Parameters.AddWithValue("@Parameter1", reqID);
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                if (reader.Read())
+                {
+                    string AT = reader.GetString(0);
+
+                    string qGetReqNo = "SELECT reqNo FROM Users WHERE AT = @Parameter2";    //Get reqNo and reduce it
+                    command.CommandText = qGetReqNo;
+                    command.Parameters.AddWithValue("@Parameter2", AT);
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        int reqNo = reader.GetInt32(0);
+                        reqNo += -1;
+                        reader.Close();
+
+                        string qUpdateReqNo = "UPDATE Users SET reqNo = @Par1 WHERE AT = @Par2";    //Update reqNo in User
+                        command.CommandText = qUpdateReqNo;
+                        command.Parameters.AddWithValue("@Par1", reqNo);
+                        command.Parameters.AddWithValue("@Par2", AT);
+                        command.ExecuteNonQuery();
+
+                        string qDelReq = "DELETE FROM Requests WHERE reqID = @Parameter1";  //Delete request
+                        command.CommandText = qDelReq;
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Η αίτηση με κωδικό " + reqID + "έχει διαγραφεί", "Message");
+                    }
+
+                }
+            } else
+            {
+                MessageBox.Show("Δεν υπάρχει αίτηση με αυτό τον κωδικό", "Message");
+            }
+            kepDB.Close();
+        }
 
     }
+
+    
 
 }
