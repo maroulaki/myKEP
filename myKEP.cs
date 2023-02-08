@@ -53,7 +53,7 @@ namespace myKEP
 
         private void listReqBtn_Click(object sender, EventArgs e)
         {
-
+            SelectForm(new View());
         }
 
         private void editReqBtn_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace myKEP
 
         private void listText_Click(object sender, EventArgs e)
         {
-
+            listReqBtn_Click(sender, e);
         }
 
         private void welcome_Click(object sender, EventArgs e)

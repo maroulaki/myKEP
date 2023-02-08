@@ -74,7 +74,6 @@
             this.typeLabel.Size = new System.Drawing.Size(186, 36);
             this.typeLabel.TabIndex = 83;
             this.typeLabel.Text = "Τύπος αίτησης";
-            
             // 
             // typeField
             // 
