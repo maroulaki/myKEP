@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataViewUsers = new System.Windows.Forms.DataGridView();
-            this.kEP1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reqIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataViewReq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kEP1DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -266,7 +264,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataViewReq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kEP1DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,7 +291,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aTDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn reqNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource kEP1DataSetBindingSource;
         private System.Windows.Forms.BindingSource usersBindingSource;
     }
 }
