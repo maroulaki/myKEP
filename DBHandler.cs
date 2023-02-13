@@ -13,14 +13,7 @@ namespace myKEP
 {
     public class DBHandler
     {
-        string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mtimo\\source\\repos\\myKEP\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
-        
-        public void test()
-        {
-            SqlConnection kepDB = new SqlConnection(ConnString);
-            kepDB.Open();
-            kepDB.Close();
-        }
+        public string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mtimo\\source\\repos\\myKEP\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Builds a unique request ID
         public string RequestIDGen()
@@ -53,7 +46,7 @@ namespace myKEP
             command.Parameters.AddWithValue("@Par5", user.DateOfBirth);
             command.Parameters.AddWithValue("@Par6", user.Address);
             command.Parameters.AddWithValue("@Par7", user.AT);
-            command.Parameters.AddWithValue("@Par8", 1);
+            command.Parameters.AddWithValue("@Par8", 0);
             command.ExecuteNonQuery();
             command.Dispose();
         }
@@ -219,7 +212,7 @@ namespace myKEP
             } else
             {
                 NewUserEntry(user, kepDB);
-                MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας" + user.AT + " καταχωρίστηκε");
+                MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας " + user.AT + " καταχωρίστηκε", "Message");
             }
         }
 
@@ -290,6 +283,7 @@ namespace myKEP
             kepDB.Close();
         }
 
+        
     }
 
     

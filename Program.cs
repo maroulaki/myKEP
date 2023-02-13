@@ -16,8 +16,6 @@ namespace myKEP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Form myKEP = new Form1();
-            //Application.Run(myKEP);
             PanelTest panelTest = new PanelTest();
             Application.Run(panelTest);
 

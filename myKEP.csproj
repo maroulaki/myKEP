@@ -106,11 +106,6 @@
     <Compile Include="EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="KEP1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KEP1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="NewReq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,17 +189,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="KEP1DataSet.xsc">
-      <DependentUpon>KEP1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="KEP1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>KEP1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="KEP1DataSet.xss">
-      <DependentUpon>KEP1DataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
