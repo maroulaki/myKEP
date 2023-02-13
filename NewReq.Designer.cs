@@ -105,6 +105,7 @@
             this.Controls.Add(this.newReqLabel);
             this.Name = "NewReq";
             this.Text = "NewReq";
+            this.Load += new System.EventHandler(this.NewReq_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

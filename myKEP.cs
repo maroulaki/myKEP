@@ -3,16 +3,16 @@ using System.Windows.Forms;
 
 namespace myKEP
 {
-    public partial class PanelTest : Form
+    public partial class myKEP : Form
     {
-        public PanelTest()
+        public myKEP()
         {
             InitializeComponent();
-            KEPdb = new DBHandler();
+            
             
         }
         private Form currentForm;
-        private DBHandler KEPdb;
+        
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +37,7 @@ namespace myKEP
 
             if (popup.ShowDialog(this) == DialogResult.OK)
             {
-                bool userExists = KEPdb.UserExists(popup.Response.Text);
+                bool userExists = DBHandler.UserExists(popup.Response.Text);
 
                 if (userExists)
                 {
@@ -62,7 +62,7 @@ namespace myKEP
 
             if (popup.ShowDialog(this) == DialogResult.OK)
             {
-                bool codeExists = KEPdb.RequestExists(popup.Response.Text);
+                bool codeExists = DBHandler.RequestExists(popup.Response.Text);
                 if (codeExists)
                 {
                     SelectForm(new EditReq(popup.Response.Text));
@@ -87,14 +87,14 @@ namespace myKEP
                     PopupAT popAT = new PopupAT();
                     if (popAT.ShowDialog(this) == DialogResult.OK)
                     {
-                        KEPdb.DeleteUser(popAT.Response.Text);
+                        DBHandler.DeleteUser(popAT.Response.Text);
                     }
                 } else if (popup.delResponse.Text == "Διαγραφή αίτησης")
                 {
                     PopupReqCode popCode = new PopupReqCode();
                     if (popCode.ShowDialog(this) == DialogResult.OK)
                     {
-                        KEPdb.DeleteRequest(popCode.Response.Text);
+                        DBHandler.DeleteRequest(popCode.Response.Text);
                     }
                 }
                     
@@ -114,7 +114,7 @@ namespace myKEP
 
             if (popup.ShowDialog(this) == DialogResult.OK)
             {
-                bool userExists = KEPdb.UserExists(popup.Response.Text);
+                bool userExists = DBHandler.UserExists(popup.Response.Text);
 
                 if (userExists)
                 {

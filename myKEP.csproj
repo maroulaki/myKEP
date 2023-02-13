@@ -94,6 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBHandler.cs" />
+    <Compile Include="KEPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KEPDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +194,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="KEPDataSet.xsc">
+      <DependentUpon>KEPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KEPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KEPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KEPDataSet.xss">
+      <DependentUpon>KEPDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -12,7 +12,7 @@
         
         
 
-        public User (string name, string surname, string email, string phone, string dob, string address, string ID)
+        public User (string name, string surname, string phone, string email, string dob, string address, string ID)
         {
             Name = name;
             Surname = surname;

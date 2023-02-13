@@ -1,6 +1,6 @@
 ﻿namespace myKEP
 {
-    partial class PanelTest
+    partial class myKEP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelTest));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(myKEP));
             this.delText = new System.Windows.Forms.Label();
             this.listText = new System.Windows.Forms.Label();
             this.newReqLabel = new System.Windows.Forms.Label();
@@ -281,7 +281,7 @@
             this.editUserBtn.TabStop = false;
             this.editUserBtn.Click += new System.EventHandler(this.editUserBtn_Click);
             // 
-            // PanelTest
+            // myKEP
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Info;

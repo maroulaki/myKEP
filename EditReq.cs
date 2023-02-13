@@ -15,12 +15,10 @@ namespace myKEP
         public EditReq(string reqCode)
         {
             InitializeComponent();
-            KEPdb = new DBHandler();
-            request = KEPdb.FetchRequest(reqCode);
+            DBHandler.FetchRequest(reqCode);
             typeField.Text = request.Type;
         }
 
-        private DBHandler KEPdb;
         private Request request;
 
         private void reqEditButton_Click(object sender, EventArgs e)
@@ -33,11 +31,16 @@ namespace myKEP
             else
             {
                 request.Type = typeField.Text;
-                KEPdb.UpdateRequest(request); 
+                DBHandler.UpdateRequest(request); 
             }
         }
 
         private void typeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditReq_Load(object sender, EventArgs e)
         {
 
         }

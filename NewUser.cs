@@ -14,10 +14,7 @@ namespace myKEP
         public NewUser()
         {
             InitializeComponent();
-            KEPdb = new DBHandler();
         }
-        private DBHandler KEPdb;
-
 
         private void myKEP_Load(object sender, EventArgs e)
         {
@@ -63,8 +60,8 @@ namespace myKEP
             }
             else
             {
-                User user = new User(nameField.Text, surnameField.Text, emailField.Text, phoneField.Text, dobPicker.Text, addressField.Text, ATField.Text);
-                KEPdb.InsertUser(user);
+                User user = new User(nameField.Text, surnameField.Text, phoneField.Text, emailField.Text, dobPicker.Text, addressField.Text, ATField.Text);
+                DBHandler.InsertUser(user);
             }
         }
 

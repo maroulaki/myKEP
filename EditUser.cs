@@ -13,13 +13,11 @@ namespace myKEP
     public partial class EditUser : Form
     {
         User user;
-        DBHandler KEPdb;
 
         public EditUser(string AT)
         {
             InitializeComponent();
-            KEPdb = new DBHandler();
-            user = KEPdb.FetchUser(AT);
+            user = DBHandler.FetchUser(AT);
             nameField.Text = user.Name;
             surnameField.Text = user.Surname;
             phoneField.Text = user.Phone;
@@ -74,7 +72,7 @@ namespace myKEP
                 user.Email = emailField.Text;
                 user.DateOfBirth = dobPicker.Text;
                 user.Address = addressField.Text;
-                KEPdb.UpdateUser(user);
+                DBHandler.UpdateUser(user);
             }
         }
     }

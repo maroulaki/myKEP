@@ -12,13 +12,11 @@ namespace myKEP
 {
     public partial class NewReq : Form
     {
-        DBHandler KEPdb;
         User user;
         public NewReq(string AT)
         {
             InitializeComponent();
-            KEPdb = new DBHandler();
-            user = KEPdb.FetchUser(AT);
+            user = DBHandler.FetchUser(AT);
         }
 
         private void newReqButton_Click(object sender, EventArgs e)
@@ -29,9 +27,14 @@ namespace myKEP
             }
             else
             {
-                Request request = new Request(typeField.Text, DateTime.Now.ToString(), user.AT, KEPdb.RequestIDGen());
-                KEPdb.InsertRequest(user, request);
+                Request request = new Request(typeField.Text, DateTime.Now.ToString(), user.AT, DBHandler.RequestIDGen());
+                DBHandler.InsertRequest(user, request);
             }
+        }
+
+        private void NewReq_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

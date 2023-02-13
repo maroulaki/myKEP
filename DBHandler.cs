@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace myKEP
 {
-    public class DBHandler
+    public static class DBHandler
     {
-        public string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mtimo\\source\\repos\\myKEP\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mtimo\\source\\repos\\myKEP\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Builds a unique request ID
-        public string RequestIDGen()
+        public static string RequestIDGen()
         {
             Random rand = new Random();
             var reqID = new StringBuilder();
@@ -34,7 +34,7 @@ namespace myKEP
             return reqID.ToString();
         }
 
-        private void NewUserEntry(User user, SqlConnection conn)
+        private static void NewUserEntry(User user, SqlConnection conn)
         {
             string qNewUser = "INSERT INTO Users(Name, Surname, Phone, Email, DateOfBirth, Address, AT, reqNo) VALUES (@Par1, @Par2, @Par3, @Par4, @Par5, @Par6, @Par7, @Par8)";
             SqlCommand command = new SqlCommand(qNewUser, conn);
@@ -51,7 +51,7 @@ namespace myKEP
             command.Dispose();
         }
 
-        private void NewRequestEntry(Request request, SqlConnection conn)
+        private static void NewRequestEntry(Request request, SqlConnection conn)
         {
             string qNewReq = "INSERT INTO Requests(Type, Date, AT, reqID) VALUES (@Par1, @Par2, @Par3, @Par4)";
             SqlCommand command = new SqlCommand(qNewReq, conn);
@@ -64,7 +64,7 @@ namespace myKEP
             command.Dispose();
         }
 
-        public void InsertRequest(User user, Request request)
+        public static void InsertRequest(User user, Request request)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             kepDB.Open();
@@ -94,7 +94,7 @@ namespace myKEP
             kepDB.Close();
         }
 
-        public Request FetchRequest(string Code)
+        public static Request FetchRequest(string Code)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             string qGetReqValues = "SELECT Type,Date,AT,reqID FROM Requests WHERE reqID = @Parameter";
@@ -114,7 +114,7 @@ namespace myKEP
             return null;
         }
 
-        public User FetchUser(string AT)
+        public static User FetchUser(string AT)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             string qGetUserValues = "SELECT Name, Surname, Phone, Email, DateOfBirth, Address, AT FROM Users WHERE AT = @Parameter";
@@ -134,7 +134,7 @@ namespace myKEP
             return null;
         }
 
-        public bool RequestExists(string Code)
+        public static bool RequestExists(string Code)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             string qSearchReqCode = "SELECT Id FROM Requests WHERE reqID = @Parameter";
@@ -151,7 +151,7 @@ namespace myKEP
             return false;
         }
 
-        public bool UserExists(string AT)
+        public static bool UserExists(string AT)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             string qSearchByAT = "SELECT Id FROM Users WHERE AT = @Parameter";
@@ -168,7 +168,7 @@ namespace myKEP
             return false;
         }
 
-        public void UpdateUser(User user)
+        public static void UpdateUser(User user)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             string qUpdateUser = "UPDATE Users SET Name = @Par1, Surname = @Par2, Phone = @Par3, Email = @Par4, DateOfBirth = @Par5, Address = @Par6 WHERE AT = @Par7";
@@ -184,10 +184,10 @@ namespace myKEP
             command.ExecuteNonQuery();
             command.Dispose();
             kepDB.Close();
-            MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας" + user.AT + "ενημερώθηκε");
+            MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας " + user.AT + " ενημερώθηκε");
         }
 
-        public void UpdateRequest(Request request)
+        public static void UpdateRequest(Request request)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             kepDB.Open();
@@ -201,7 +201,7 @@ namespace myKEP
             MessageBox.Show("Η αίτηση " + request.reqID + " ενημερώθηκε", "Message");
         }
 
-        public void InsertUser(User user)
+        public static void InsertUser(User user)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             kepDB.Open();
@@ -216,7 +216,7 @@ namespace myKEP
             }
         }
 
-        public void DeleteUser(string AT)
+        public static void DeleteUser(string AT)
         {
             if (UserExists(AT))
             {
@@ -236,7 +236,7 @@ namespace myKEP
             }
         }
 
-        public void DeleteRequest(string reqID)
+        public static void DeleteRequest(string reqID)
         {
             SqlConnection kepDB = new SqlConnection(ConnString);
             kepDB.Open();
