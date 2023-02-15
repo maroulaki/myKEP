@@ -12,14 +12,17 @@ namespace myKEP
 {
     public partial class EditReq : Form
     {
+
+        private Request request;
+
         public EditReq(string reqCode)
         {
             InitializeComponent();
-            DBHandler.FetchRequest(reqCode);
+            request = DBHandler.FetchRequest(reqCode);
             typeField.Text = request.Type;
         }
 
-        private Request request;
+        
 
         private void reqEditButton_Click(object sender, EventArgs e)
         {
