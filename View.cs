@@ -33,5 +33,10 @@ namespace myKEP
             dataViewReq.DataSource = KEPds.Tables[1];
           
         }
+
+        private void dataViewReq_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

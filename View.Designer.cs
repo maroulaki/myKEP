@@ -49,6 +49,8 @@
             // 
             this.dataViewReq.AllowUserToAddRows = false;
             this.dataViewReq.AllowUserToDeleteRows = false;
+            this.dataViewReq.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataViewReq.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataViewReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataViewReq.Location = new System.Drawing.Point(2, 42);
             this.dataViewReq.Name = "dataViewReq";
@@ -57,6 +59,7 @@
             this.dataViewReq.RowTemplate.Height = 24;
             this.dataViewReq.Size = new System.Drawing.Size(861, 214);
             this.dataViewReq.TabIndex = 0;
+            this.dataViewReq.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataViewReq_CellContentClick);
             // 
             // label1
             // 
@@ -84,6 +87,8 @@
             // 
             this.dataViewUsers.AllowUserToAddRows = false;
             this.dataViewUsers.AllowUserToDeleteRows = false;
+            this.dataViewUsers.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataViewUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn1,
