@@ -19,8 +19,8 @@ namespace myKEP
             
         }
         
+        //Make a new dataset, fill it with the data adapters for each table and use it as source for the datagridview elements
         private void View_Load(object sender, EventArgs e)
-
         {
             string qGetUsers = "SELECT * FROM Users";
             string qGetReqs = "SELECT * FROM Requests";

@@ -67,13 +67,12 @@
             this.newReqLabel.BackColor = System.Drawing.Color.Transparent;
             this.newReqLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.newReqLabel.Location = new System.Drawing.Point(224, 9);
-            this.newReqLabel.Name = "editReqLabel";
+            this.newReqLabel.Name = "newReqLabel";
             this.newReqLabel.Size = new System.Drawing.Size(429, 51);
             this.newReqLabel.TabIndex = 72;
             this.newReqLabel.Tag = "";
             this.newReqLabel.Text = "Επεξεργασία στοιχείων";
             this.newReqLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // addressLabel
             // 
@@ -223,6 +222,7 @@
             this.Controls.Add(this.nameLabel);
             this.Name = "EditUser";
             this.Text = "EditUser";
+            this.Load += new System.EventHandler(this.EditUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

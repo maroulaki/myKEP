@@ -21,6 +21,7 @@ namespace myKEP
 
         }
 
+        //check for empty fields
         private void reqEnterButton_Click(object sender, EventArgs e)
         {
             bool emptyFields = false;
@@ -58,7 +59,7 @@ namespace myKEP
             {
                 MessageBox.Show("Παρακαλώ συμπληρώστε σωστά όλα τα πεδία", "Message");
             }
-            else
+            else    //insert new user into the db using the input
             {
                 User user = new User(nameField.Text, surnameField.Text, phoneField.Text, emailField.Text, dobPicker.Text, addressField.Text, ATField.Text);
                 DBHandler.InsertUser(user);

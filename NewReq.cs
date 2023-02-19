@@ -13,12 +13,15 @@ namespace myKEP
     public partial class NewReq : Form
     {
         User user;
+
+        //get user information
         public NewReq(string AT)
         {
             InitializeComponent();
             user = DBHandler.FetchUser(AT);
         }
 
+        //check the request type and save it
         private void newReqButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(typeField.Text))

@@ -14,6 +14,7 @@ namespace myKEP
     {
         User user;
 
+        //load the information of the user in the fields
         public EditUser(string AT)
         {
             InitializeComponent();
@@ -26,11 +27,7 @@ namespace myKEP
             addressField.Text = user.Address;
         }
 
-        private void newReqLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //check that input is correct
         private void userEditButton_Click(object sender, EventArgs e)
         {
             bool emptyFields = false;
@@ -64,7 +61,7 @@ namespace myKEP
             {
                 MessageBox.Show("Παρακαλώ συμπληρώστε σωστά όλα τα πεδία", "Message");
             }
-            else
+            else    //update user with new information
             {
                 user.Name = nameField.Text;
                 user.Surname = surnameField.Text;
@@ -74,6 +71,11 @@ namespace myKEP
                 user.Address = addressField.Text;
                 DBHandler.UpdateUser(user);
             }
+        }
+
+        private void EditUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

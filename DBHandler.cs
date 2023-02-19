@@ -2,18 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace myKEP
 {
     public static class DBHandler
     {
-        public static string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mtimo\\source\\repos\\myKEP\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        public static string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + directory + "\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
+
+        //public static string ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mtimo\\source\\repos\\myKEP\\KEP1.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Builds a unique request ID
         public static string RequestIDGen()
@@ -92,6 +97,22 @@ namespace myKEP
             }
             command.Dispose();
             kepDB.Close();
+        }
+
+        public static void InsertUser(User user)
+        {
+            SqlConnection kepDB = new SqlConnection(ConnString);
+            kepDB.Open();
+            if (UserExists(user.AT))
+            {
+                MessageBox.Show("Υπάρχει ήδη χρήστης με αυτό τον Αριθμό Ταυτότητας. Προσπαθήστε ξανά με άλλον αριθμό", "Message");
+
+            }
+            else
+            {
+                NewUserEntry(user, kepDB);
+                MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας " + user.AT + " καταχωρίστηκε", "Message");
+            }
         }
 
         public static Request FetchRequest(string Code)
@@ -199,21 +220,6 @@ namespace myKEP
             command.Dispose();
             kepDB.Close();
             MessageBox.Show("Η αίτηση " + request.reqID + " ενημερώθηκε", "Message");
-        }
-
-        public static void InsertUser(User user)
-        {
-            SqlConnection kepDB = new SqlConnection(ConnString);
-            kepDB.Open();
-            if (UserExists(user.AT))
-            {
-                MessageBox.Show("Υπάρχει ήδη χρήστης με αυτό τον Αριθμό Ταυτότητας. Προσπαθήστε ξανά με άλλον αριθμό", "Message");
-                
-            } else
-            {
-                NewUserEntry(user, kepDB);
-                MessageBox.Show("Ο χρήστης με αριθμό Ταυτότητας " + user.AT + " καταχωρίστηκε", "Message");
-            }
         }
 
         public static void DeleteUser(string AT)

@@ -18,6 +18,7 @@ namespace myKEP
 
         }
 
+        //fit the appropriate form in the panel
         private void SelectForm(Form nextForm)
         {
             if (currentForm != null)
@@ -31,6 +32,7 @@ namespace myKEP
             nextForm.Show();
         }
 
+        //check whether a user with this AT exists
         private void newReqBtn_Click(object sender, EventArgs e)
         {
             PopupAT popup = new PopupAT();
@@ -56,6 +58,7 @@ namespace myKEP
             SelectForm(new View());
         }
 
+        //check whether a request with this code exists
         private void editReqBtn_Click(object sender, EventArgs e)
         { 
             PopupReqCode popup = new PopupReqCode();
@@ -76,6 +79,7 @@ namespace myKEP
 
         }
 
+        //delete user or request
         private void delReqBtn_Click(object sender, EventArgs e)
         {
             PopupDel popup = new PopupDel();
@@ -108,6 +112,7 @@ namespace myKEP
             SelectForm(new NewUser());
         }
 
+        //edit user, if a user with the AT exists
         private void editUserBtn_Click(object sender, EventArgs e)
         {
             PopupAT popup = new PopupAT();
